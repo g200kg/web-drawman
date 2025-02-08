@@ -5,7 +5,7 @@
 <title>WebDrawman</title>
 <script src="https://g200kg.github.io/webaudio-controls/webaudio-controls.js"></script>
 <script src="./conv.js"></script>
-<script src="./skindesigner.js"></script>
+<script src="./drawman.js"></script>
 <style>
 html {
   height:100%;
@@ -226,6 +226,10 @@ body {
   width:100%;
   background:#345;
   height:70px;
+  color:#ccf;
+}
+#menubase a {
+  color:#ccf;
 }
 #dmenu {
   position:relative;
@@ -551,6 +555,7 @@ body {
 <div id="menubase">
   <img src="./images/Img/g200kg160x80.png" style="width:110px;margin:5px">
   <div style="position:absolute;top:5px;left:120px;color:#ccf;font-family:cursive;font-size:18px">WebDrawman</div>
+  <div style="position:absolute;top:5px;right:20px;color:#ccf;font-size:12px"><a href="https://github.com/g200kg/web-drawman" target="_blank">GitHub : https://github.com/g200kg/web-drawman</a></div>
   <div id="menubar">
     <button id="file" title="File">File</button>
     <button id="edit" title="Edit">Edit</button> |
@@ -558,7 +563,7 @@ body {
     <button id="objDown" title="Object Move to Background"><img id="objDown#Icon" src="./images/Icon/objdown.png" class="icon"></button>
     <button id="objDup" title="Dupicate Object"><img id="objDup#Icon" src="./images/Icon/objdup.png" class="icon"></button>
     <button id="objDel" title="Delete Object"><img id="objDel#Icon" src="./images/Icon/objdel.png" class="icon"></button> |
-    <button id="zoomOut" title="Zoom Out"><img id="zoomOut#Icon" src="./images/Icon/zoomOut.png" class="icon"></button>
+    <button id="zoomOut" title="Zoom Out"><img id="zoomOut#Icon" src="./images/Icon/zoomout.png" class="icon"></button>
     <button id="zoom1" title="Zoom 1"><img id="zoom1#Icon" src="./images/Icon/zoom1.png" class="icon"></button>
     <button id="zoomIn" title="Zoom In"><img id="zoomIn#Icon" src="./images/Icon/zoomin.png" class="icon"></button> |
     <input type="radio" id="toolHand" name="tool" checked><label title="Scroll" for="toolHand"><img src="./images/Icon/toolhand.png"/></label>

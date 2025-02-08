@@ -131,7 +131,6 @@ class Obj {
     del(obj) {
         const op = objRoot.getObj(obj.parent);
         const idx = op.list.indexOf(obj);
-        console.log("del",obj,op,idx)
         op.list.splice(idx,1);
     }
     toggle(obj) {
@@ -792,7 +791,6 @@ class ObjView {
             opTo = objRoot.getObj(oTo.parent);
             idxTo = opTo.list.indexOf(oTo);
         }
-        console.log(idTo, oTo, opTo, idxTo)
         opTo.list.splice(idxTo,0, oFrom);
     }
 }

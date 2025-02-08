@@ -1,0 +1,972 @@
+{
+ "document": {
+  "width": 64,
+  "height": 64,
+  "grid": {
+   "x": 1,
+   "y": 1
+  }
+ },
+ "palette": [
+  "#000000",
+  "#0000ff",
+  "#00ff00",
+  "#00ffff",
+  "#ff0000",
+  "#ff00ff",
+  "#ffff00",
+  "#ffffff",
+  "#808080",
+  "#000080",
+  "#008000",
+  "#008080",
+  "#800000",
+  "#800080",
+  "#808000",
+  "#c0c0c0",
+  "#000000",
+  "#202020",
+  "#404040",
+  "#606060",
+  "#808080",
+  "#a0a0a0",
+  "#c0c0c0",
+  "#e0e0e0",
+  "#adff2f",
+  "#afeeee",
+  "#b0c4de",
+  "#b0e0e6",
+  "#b22222",
+  "#b8860b",
+  "#ba55d3",
+  "#bc8f8f",
+  "#bdb76b",
+  "#c0c0c0",
+  "#c71585",
+  "#cd5c5c",
+  "#cd853f",
+  "#d2691e",
+  "#d2b48c",
+  "#d3d3d3"
+ ],
+ "list": [
+  {
+   "type": "Shape",
+   "name": "Hand",
+   "visible": true,
+   "lock": false,
+   "x": 2,
+   "y": 4,
+   "w": 58,
+   "h": 56,
+   "rotate": 0,
+   "rxSep": false,
+   "rx1": 0,
+   "rx2": 0,
+   "rx3": 0,
+   "rx4": 0,
+   "shape": [
+    {
+     "x": 20,
+     "y": 60
+    },
+    {
+     "x": 20,
+     "y": 60
+    },
+    {
+     "x": 20,
+     "y": 60
+    },
+    {
+     "x": 4,
+     "y": 44
+    },
+    {
+     "x": 4,
+     "y": 40
+    },
+    {
+     "x": 4,
+     "y": 36
+    },
+    {
+     "x": 2,
+     "y": 32
+    },
+    {
+     "x": 8,
+     "y": 32
+    },
+    {
+     "x": 14,
+     "y": 32
+    },
+    {
+     "x": 16,
+     "y": 40
+    },
+    {
+     "x": 16,
+     "y": 40
+    },
+    {
+     "x": 16,
+     "y": 40
+    },
+    {
+     "x": 16,
+     "y": 20
+    },
+    {
+     "x": 16,
+     "y": 16
+    },
+    {
+     "x": 16,
+     "y": 12
+    },
+    {
+     "x": 18,
+     "y": 8
+    },
+    {
+     "x": 22,
+     "y": 8
+    },
+    {
+     "x": 26,
+     "y": 8
+    },
+    {
+     "x": 27,
+     "y": 12
+    },
+    {
+     "x": 27,
+     "y": 16
+    },
+    {
+     "x": 27,
+     "y": 20
+    },
+    {
+     "x": 27,
+     "y": 30
+    },
+    {
+     "x": 27,
+     "y": 30
+    },
+    {
+     "x": 27,
+     "y": 30
+    },
+    {
+     "x": 27,
+     "y": 12
+    },
+    {
+     "x": 27,
+     "y": 12
+    },
+    {
+     "x": 27,
+     "y": 12
+    },
+    {
+     "x": 28,
+     "y": 4
+    },
+    {
+     "x": 33,
+     "y": 4
+    },
+    {
+     "x": 38,
+     "y": 4
+    },
+    {
+     "x": 38,
+     "y": 12
+    },
+    {
+     "x": 38,
+     "y": 12
+    },
+    {
+     "x": 38,
+     "y": 12
+    },
+    {
+     "x": 38,
+     "y": 31
+    },
+    {
+     "x": 38,
+     "y": 31
+    },
+    {
+     "x": 38,
+     "y": 31
+    },
+    {
+     "x": 38,
+     "y": 16
+    },
+    {
+     "x": 38,
+     "y": 16
+    },
+    {
+     "x": 38,
+     "y": 16
+    },
+    {
+     "x": 39,
+     "y": 8
+    },
+    {
+     "x": 44,
+     "y": 8
+    },
+    {
+     "x": 49,
+     "y": 8
+    },
+    {
+     "x": 49,
+     "y": 16
+    },
+    {
+     "x": 49,
+     "y": 16
+    },
+    {
+     "x": 49,
+     "y": 16
+    },
+    {
+     "x": 49,
+     "y": 32
+    },
+    {
+     "x": 49,
+     "y": 32
+    },
+    {
+     "x": 49,
+     "y": 32
+    },
+    {
+     "x": 49,
+     "y": 20
+    },
+    {
+     "x": 49,
+     "y": 20
+    },
+    {
+     "x": 49,
+     "y": 20
+    },
+    {
+     "x": 51,
+     "y": 12
+    },
+    {
+     "x": 55,
+     "y": 12
+    },
+    {
+     "x": 59,
+     "y": 12
+    },
+    {
+     "x": 60,
+     "y": 20
+    },
+    {
+     "x": 60,
+     "y": 20
+    },
+    {
+     "x": 60,
+     "y": 20
+    },
+    {
+     "x": 60,
+     "y": 32
+    },
+    {
+     "x": 60,
+     "y": 40
+    },
+    {
+     "x": 60,
+     "y": 48
+    },
+    {
+     "x": 44,
+     "y": 60
+    },
+    {
+     "x": 44,
+     "y": 60
+    },
+    {
+     "x": 44,
+     "y": 60
+    }
+   ],
+   "shapeOrgX": 2,
+   "shapeOrgY": 4,
+   "shapeOrgW": 58,
+   "shapeOrgH": 56,
+   "shapeClose": true,
+   "polyVertex": 5,
+   "polyDepth": 100,
+   "polyTopWidth": 0,
+   "polyBottomWidth": 0,
+   "text": "Text",
+   "font": "sans-serif",
+   "textBold": false,
+   "textItalic": false,
+   "textAlign": "left",
+   "textFit": false,
+   "colFill1": "#ff0000",
+   "colFill1Alpha": 100,
+   "colFill2": "#800000",
+   "colFill2Alpha": 100,
+   "colStroke": "#000000",
+   "colStrokeAlpha": 100,
+   "colShadow": "#000000",
+   "colGradation": "linear",
+   "colGradX1": 0.1,
+   "colGradY1": 0.1,
+   "colGradX2": 0.9,
+   "colGradY2": 0.9,
+   "fill": true,
+   "stroke": true,
+   "lineWidth": 1,
+   "lineJoin": "round",
+   "lineCap": "round",
+   "blur": 0,
+   "embossWidth": 4,
+   "embossDepth": 0,
+   "embossBlur": 50,
+   "textureType": "None",
+   "textureDepth": 0,
+   "textureZoom": 100,
+   "shadowOffX": 8,
+   "shadowOffY": 8,
+   "shadowDepth": 0,
+   "shadowBlur": 8
+  },
+  {
+   "type": "Shape",
+   "name": "Arrow",
+   "visible": false,
+   "lock": false,
+   "x": 4,
+   "y": 4,
+   "w": 56,
+   "h": 56,
+   "rotate": 0,
+   "rxSep": false,
+   "rx1": 0,
+   "rx2": 0,
+   "rx3": 0,
+   "rx4": 0,
+   "shape": [
+    {
+     "x": 4,
+     "y": 4
+    },
+    {
+     "x": 4,
+     "y": 4
+    },
+    {
+     "x": 4,
+     "y": 4
+    },
+    {
+     "x": 48,
+     "y": 20
+    },
+    {
+     "x": 48,
+     "y": 20
+    },
+    {
+     "x": 48,
+     "y": 20
+    },
+    {
+     "x": 36,
+     "y": 28
+    },
+    {
+     "x": 36,
+     "y": 28
+    },
+    {
+     "x": 36,
+     "y": 28
+    },
+    {
+     "x": 60,
+     "y": 52
+    },
+    {
+     "x": 60,
+     "y": 52
+    },
+    {
+     "x": 60,
+     "y": 52
+    },
+    {
+     "x": 52,
+     "y": 60
+    },
+    {
+     "x": 52,
+     "y": 60
+    },
+    {
+     "x": 52,
+     "y": 60
+    },
+    {
+     "x": 28,
+     "y": 36
+    },
+    {
+     "x": 28,
+     "y": 36
+    },
+    {
+     "x": 28,
+     "y": 36
+    },
+    {
+     "x": 20,
+     "y": 48
+    },
+    {
+     "x": 20,
+     "y": 48
+    },
+    {
+     "x": 20,
+     "y": 48
+    }
+   ],
+   "shapeOrgX": 4,
+   "shapeOrgY": 4,
+   "shapeOrgW": 56,
+   "shapeOrgH": 56,
+   "shapeClose": true,
+   "polyVertex": 5,
+   "polyDepth": 100,
+   "polyTopWidth": 0,
+   "polyBottomWidth": 0,
+   "text": "Text",
+   "font": "sans-serif",
+   "textBold": false,
+   "textItalic": false,
+   "textAlign": "left",
+   "textFit": false,
+   "colFill1": "#ff0000",
+   "colFill1Alpha": 100,
+   "colFill2": "#800000",
+   "colFill2Alpha": 100,
+   "colStroke": "#000000",
+   "colStrokeAlpha": 100,
+   "colShadow": "#000000",
+   "colGradation": "linear",
+   "colGradX1": 0.1,
+   "colGradY1": 0.1,
+   "colGradX2": 0.9,
+   "colGradY2": 0.9,
+   "fill": true,
+   "stroke": true,
+   "lineWidth": 1,
+   "lineJoin": "round",
+   "lineCap": "round",
+   "blur": 0,
+   "embossWidth": 4,
+   "embossDepth": 0,
+   "embossBlur": 50,
+   "textureType": "None",
+   "textureDepth": 0,
+   "textureZoom": 100,
+   "shadowOffX": 8,
+   "shadowOffY": 8,
+   "shadowDepth": 0,
+   "shadowBlur": 8
+  },
+  {
+   "type": "Shape",
+   "name": null,
+   "visible": false,
+   "lock": false,
+   "x": 0,
+   "y": 4,
+   "w": 64,
+   "h": 56,
+   "rotate": 0,
+   "rxSep": false,
+   "rx1": 0,
+   "rx2": 0,
+   "rx3": 0,
+   "rx4": 0,
+   "shape": [
+    {
+     "x": 32,
+     "y": 16
+    },
+    {
+     "x": 32,
+     "y": 16
+    },
+    {
+     "x": 32,
+     "y": 16
+    },
+    {
+     "x": 40,
+     "y": 4
+    },
+    {
+     "x": 48,
+     "y": 4
+    },
+    {
+     "x": 56,
+     "y": 4
+    },
+    {
+     "x": 64,
+     "y": 16
+    },
+    {
+     "x": 52,
+     "y": 36
+    },
+    {
+     "x": 40,
+     "y": 56
+    },
+    {
+     "x": 32,
+     "y": 60
+    },
+    {
+     "x": 32,
+     "y": 60
+    },
+    {
+     "x": 32,
+     "y": 60
+    },
+    {
+     "x": 24,
+     "y": 56
+    },
+    {
+     "x": 12,
+     "y": 36
+    },
+    {
+     "x": 0,
+     "y": 16
+    },
+    {
+     "x": 8,
+     "y": 4
+    },
+    {
+     "x": 16,
+     "y": 4
+    },
+    {
+     "x": 24,
+     "y": 4
+    }
+   ],
+   "shapeOrgX": 0,
+   "shapeOrgY": 4,
+   "shapeOrgW": 64,
+   "shapeOrgH": 56,
+   "shapeClose": true,
+   "polyVertex": 5,
+   "polyDepth": 100,
+   "polyTopWidth": 0,
+   "polyBottomWidth": 0,
+   "text": "Text",
+   "font": "sans-serif",
+   "textBold": false,
+   "textItalic": false,
+   "textAlign": "left",
+   "textFit": false,
+   "colFill1": "#ff0000",
+   "colFill1Alpha": 100,
+   "colFill2": "#800000",
+   "colFill2Alpha": 100,
+   "colStroke": "#000000",
+   "colStrokeAlpha": 100,
+   "colShadow": "#000000",
+   "colGradation": "linear",
+   "colGradX1": 0.1,
+   "colGradY1": 0.1,
+   "colGradX2": 0.9,
+   "colGradY2": 0.9,
+   "fill": true,
+   "stroke": true,
+   "lineWidth": 1,
+   "lineJoin": "round",
+   "lineCap": "round",
+   "blur": 0,
+   "embossWidth": 4,
+   "embossDepth": 0,
+   "embossBlur": 50,
+   "textureType": "None",
+   "textureDepth": 0,
+   "textureZoom": 100,
+   "shadowOffX": 8,
+   "shadowOffY": 8,
+   "shadowDepth": 0,
+   "shadowBlur": 8
+  },
+  {
+   "type": "Text",
+   "name": null,
+   "visible": false,
+   "lock": false,
+   "x": 4,
+   "y": -12,
+   "w": 56,
+   "h": 72,
+   "rotate": 0,
+   "rxSep": false,
+   "rx1": 0,
+   "rx2": 0,
+   "rx3": 0,
+   "rx4": 0,
+   "shape": [],
+   "shapeOrgX": 0,
+   "shapeOrgY": 0,
+   "shapeOrgW": 0,
+   "shapeOrgH": 0,
+   "shapeClose": true,
+   "polyVertex": 5,
+   "polyDepth": 100,
+   "polyTopWidth": 0,
+   "polyBottomWidth": 0,
+   "text": "T",
+   "font": "serif",
+   "textBold": true,
+   "textItalic": false,
+   "textAlign": "center",
+   "textFit": true,
+   "colFill1": "#ff0000",
+   "colFill1Alpha": 100,
+   "colFill2": "#800000",
+   "colFill2Alpha": 100,
+   "colStroke": "#000000",
+   "colStrokeAlpha": 100,
+   "colShadow": "#000000",
+   "colGradation": "linear",
+   "colGradX1": 0.1,
+   "colGradY1": 0.1,
+   "colGradX2": 0.9,
+   "colGradY2": 0.9,
+   "fill": true,
+   "stroke": true,
+   "lineWidth": 1,
+   "lineJoin": "round",
+   "lineCap": "round",
+   "blur": 0,
+   "embossWidth": 4,
+   "embossDepth": 0,
+   "embossBlur": 50,
+   "textureType": "None",
+   "textureDepth": 0,
+   "textureZoom": 100,
+   "shadowOffX": 8,
+   "shadowOffY": 8,
+   "shadowDepth": 0,
+   "shadowBlur": 8
+  },
+  {
+   "type": "Polygon",
+   "name": null,
+   "visible": false,
+   "lock": false,
+   "x": 4,
+   "y": 4,
+   "w": 56,
+   "h": 56,
+   "rotate": 0,
+   "rxSep": false,
+   "rx1": 0,
+   "rx2": 0,
+   "rx3": 0,
+   "rx4": 0,
+   "shape": [],
+   "shapeOrgX": 0,
+   "shapeOrgY": 0,
+   "shapeOrgW": 0,
+   "shapeOrgH": 0,
+   "shapeClose": true,
+   "polyVertex": 5,
+   "polyDepth": 100,
+   "polyTopWidth": 0,
+   "polyBottomWidth": 0,
+   "text": "Text",
+   "font": "sans-serif",
+   "textBold": false,
+   "textItalic": false,
+   "textAlign": "left",
+   "textFit": false,
+   "colFill1": "#ff0000",
+   "colFill1Alpha": 100,
+   "colFill2": "#800000",
+   "colFill2Alpha": 100,
+   "colStroke": "#000000",
+   "colStrokeAlpha": 100,
+   "colShadow": "#000000",
+   "colGradation": "linear",
+   "colGradX1": 0.1,
+   "colGradY1": 0.1,
+   "colGradX2": 0.9,
+   "colGradY2": 0.9,
+   "fill": true,
+   "stroke": true,
+   "lineWidth": 1,
+   "lineJoin": "round",
+   "lineCap": "round",
+   "blur": 0,
+   "embossWidth": 4,
+   "embossDepth": 0,
+   "embossBlur": 50,
+   "textureType": "None",
+   "textureDepth": 0,
+   "textureZoom": 100,
+   "shadowOffX": 8,
+   "shadowOffY": 8,
+   "shadowDepth": 0,
+   "shadowBlur": 8,
+   "th": 0,
+   "sn": 0,
+   "cs": 1,
+   "cx": 4,
+   "cy": 4,
+   "mpt1": {
+    "x": 4,
+    "y": 4
+   },
+   "mpt2": {
+    "x": 4,
+    "y": 4
+   },
+   "mpt3": {
+    "x": 4,
+    "y": 4
+   },
+   "mpt4": {
+    "x": 4,
+    "y": 4
+   },
+   "pt1": {
+    "x": 4,
+    "y": 4
+   },
+   "pt2": {
+    "x": 4,
+    "y": 4
+   }
+  },
+  {
+   "type": "Rect",
+   "name": null,
+   "visible": false,
+   "lock": false,
+   "x": 4,
+   "y": 4,
+   "w": 56,
+   "h": 56,
+   "rotate": 0,
+   "rxSep": false,
+   "rx1": 0,
+   "rx2": 0,
+   "rx3": 0,
+   "rx4": 0,
+   "shape": [],
+   "shapeOrgX": 0,
+   "shapeOrgY": 0,
+   "shapeOrgW": 0,
+   "shapeOrgH": 0,
+   "shapeClose": true,
+   "polyVertex": 5,
+   "polyDepth": 100,
+   "polyTopWidth": 0,
+   "polyBottomWidth": 0,
+   "text": "Text",
+   "font": "sans-serif",
+   "textBold": false,
+   "textItalic": false,
+   "textAlign": "left",
+   "textFit": false,
+   "colFill1": "#ff0000",
+   "colFill1Alpha": 100,
+   "colFill2": "#800000",
+   "colFill2Alpha": 100,
+   "colStroke": "#000000",
+   "colStrokeAlpha": 100,
+   "colShadow": "#000000",
+   "colGradation": "linear",
+   "colGradX1": 0.1,
+   "colGradY1": 0.1,
+   "colGradX2": 0.9,
+   "colGradY2": 0.9,
+   "fill": true,
+   "stroke": true,
+   "lineWidth": 1,
+   "lineJoin": "round",
+   "lineCap": "round",
+   "blur": 0,
+   "embossWidth": 4,
+   "embossDepth": 0,
+   "embossBlur": 50,
+   "textureType": "None",
+   "textureDepth": 0,
+   "textureZoom": 100,
+   "shadowOffX": 8,
+   "shadowOffY": 8,
+   "shadowDepth": 0,
+   "shadowBlur": 8,
+   "th": 0,
+   "sn": 0,
+   "cs": 1,
+   "cx": 0,
+   "cy": 0,
+   "mpt1": {
+    "x": 0,
+    "y": 0
+   },
+   "mpt2": {
+    "x": 0,
+    "y": 0
+   },
+   "mpt3": {
+    "x": 0,
+    "y": 0
+   },
+   "mpt4": {
+    "x": 0,
+    "y": 0
+   },
+   "pt1": {
+    "x": 0,
+    "y": 0
+   },
+   "pt2": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "type": "Circle",
+   "name": null,
+   "visible": false,
+   "lock": false,
+   "x": 4,
+   "y": 4,
+   "w": 56,
+   "h": 56,
+   "rotate": 0,
+   "rxSep": false,
+   "rx1": 0,
+   "rx2": 0,
+   "rx3": 0,
+   "rx4": 0,
+   "shape": [],
+   "shapeOrgX": 0,
+   "shapeOrgY": 0,
+   "shapeOrgW": 0,
+   "shapeOrgH": 0,
+   "shapeClose": true,
+   "polyVertex": 5,
+   "polyDepth": 100,
+   "polyTopWidth": 0,
+   "polyBottomWidth": 0,
+   "text": "Text",
+   "font": "sans-serif",
+   "textBold": false,
+   "textItalic": false,
+   "textAlign": "left",
+   "textFit": false,
+   "colFill1": "#ff0000",
+   "colFill1Alpha": 100,
+   "colFill2": "#800000",
+   "colFill2Alpha": 100,
+   "colStroke": "#000000",
+   "colStrokeAlpha": 100,
+   "colShadow": "#000000",
+   "colGradation": "linear",
+   "colGradX1": 0.1,
+   "colGradY1": 0.1,
+   "colGradX2": 0.9,
+   "colGradY2": 0.9,
+   "fill": true,
+   "stroke": true,
+   "lineWidth": 1,
+   "lineJoin": "round",
+   "lineCap": "round",
+   "blur": 0,
+   "embossWidth": 4,
+   "embossDepth": 0,
+   "embossBlur": 50,
+   "textureType": "None",
+   "textureDepth": 0,
+   "textureZoom": 100,
+   "shadowOffX": 8,
+   "shadowOffY": 8,
+   "shadowDepth": 0,
+   "shadowBlur": 8,
+   "th": 0,
+   "sn": 0,
+   "cs": 1,
+   "cx": 0,
+   "cy": 4,
+   "mpt1": {
+    "x": 0,
+    "y": 4
+   },
+   "mpt2": {
+    "x": 0,
+    "y": 4
+   },
+   "mpt3": {
+    "x": 0,
+    "y": 4
+   },
+   "mpt4": {
+    "x": 0,
+    "y": 4
+   },
+   "pt1": {
+    "x": 0,
+    "y": 4
+   },
+   "pt2": {
+    "x": 0,
+    "y": 4
+   }
+  }
+ ]
+}

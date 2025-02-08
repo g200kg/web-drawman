@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>WebDrawman</title>
+<script src="https://g200kg.github.io/webaudio-controls/webaudio-controls.js"></script>
+<script src="./conv.js"></script>
+<script src="./skindesigner.js"></script>
+<style>
+html {
+  height:100%;
+  margin:0;
+  padding:0;
+}
+body {
+  height:100%;
+  margin:0;
+  padding:0;
+  background:#345;
+  overflow:hidden;
+}
+#base {
+  position:relative;
+  width:100%;
+  margin:0;
+  padding:0;
+  background:#888;
+}
+#canvas1 {
+  position: absolute;
+  left:0;
+  top:70px;
+  border:1px solid #000;
+  width:100%;
+  height:100%;
+}
+#canvas2 {
+  position:absolute;
+  left:0;
+  top:70px;
+  border:1px solid #000;
+  width:100%;
+  height:100%;
+  cursor:default;
+}
+#canvas3 {
+  display:none;
+}
+#canvas4 {
+  display:none;
+  position:absolute;
+  top:500px;
+  left:240px;
+  background:#fff;
+}
+#objpane {
+  position:absolute;
+  left:0;
+  top:70px;
+  width:220px;
+  height:calc(100vh - 70px);
+  background:#345;
+  border:1px solid #000;
+  font-size:12px;
+  color:#fff;
+  user-select: none;
+}
+#objviewbase {
+  height:calc(100% - 20px);
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+#objpane ul {
+  padding:0;
+  margin-top:8px;
+  background:#345;
+  list-style: none;
+}
+#objpane li {
+  background:#456;
+  display:block;
+  color:#ddd;
+}
+#objpane li:hover {
+  background:#aac;
+}
+#objpane .mark {
+  background:#44c;
+  color:#fff;
+}
+#objpane .focus {
+  background:#88f;
+  border:1px solid #fff;
+  color:#fff;
+}
+#objpane .dragto {
+  border-top:15px solid #ccf;
+}
+#proppane {
+  position:absolute;
+  right:0px;
+  top:70px;
+  width:230px;
+  height:100%;
+  background:#345;
+  border:1px solid #000;
+  font-size:12px;
+  color:#fff;
+}
+.panetitle {
+  background:#458;
+  height:20px;
+}
+#propviewbase {
+  height:calc(100% - 20px);
+  overflow-y: scroll;
+}
+#proppane >div {
+  margin-left:0px;
+}
+#proppane ul {
+  padding-left:0;
+  padding-top:4px;
+  background:#345;
+  list-style: none;
+}
+.vgroup {
+  background:#668;
+  padding-left:5px;
+  color:#ddd;
+}
+.vvalue {
+  display:flex;
+  margin:4px;
+  padding-left:10px;
+  color:#fff;
+  background:#345;
+  vertical-align: middle;
+}
+.vvalue div {
+  display:inline;
+  width:60px;
+}
+.vvalue input {
+  width:40px;
+  height:12px;
+  margin: 0px 2px 0px 2px;
+  text-align:center;
+}
+.vvalue input[type="color"] {
+  height:30px;
+  width:50px;
+}
+.vvalue button {
+  font-size:12px;
+  height:18px;
+  margin-left:-2px;
+}
+.vvalue .vvalueIcon {
+  height:18px;
+  width:30px;
+  background-image:url('./images/Icon/updown.png');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  user-select:none;
+}
+.vvalue img {
+  height:18px;
+  user-select:none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+}
+.vvalue .vtext {
+  width:120px;
+  text-align: left;
+}
+#proppane input:checked+label .vvalue{
+  background: #012;
+}
+#prop.pal {
+  display:flex;
+}
+#rpropcolFill1, #rpropcolFill2, #rpropcolStroke, #rpropcolShadow {
+  display:none;
+}
+.proppal {
+  display:inline-block;
+  width:22px;
+  height:18px;
+  border:1px solid #000;
+}
+#dropdownbase {
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+}
+.icon {
+  width:20px;
+  height:20px;
+}
+.menubtn {
+  width:80px;
+  height:25px;
+  margin:5px 5px 5px 5px;
+}
+.menudropdown {
+  position:absolute;
+  width:150px;
+  box-shadow:4px;
+  background:#fff;
+  border:1px solid #000;
+  visibility: hidden;
+}
+.menuitem {
+  display:block;
+  color:#000;
+}
+.menuitem:hover {
+  background:#668;
+  color:#fff;
+}
+#menubase {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  background:#345;
+  height:70px;
+}
+#dmenu {
+  position:relative;
+  color:#fff;
+  display:flex;
+  list-style:none;
+  text-align: center;
+  margin:0;
+  z-index: 20;
+}
+#dmenu .visible {
+  display:block;
+}
+#dmenuscreen {
+  position:absolute;
+  display:block;
+  width:100%;
+  height:100vh;
+  top:45px;
+  background:rgba(0,0,0,0.5);
+}
+.dmenutopitem {
+  height:25px;
+  padding:0;
+  margin:0;
+  width:90px;
+  background:#345;
+  display:block;
+}
+.dmenudrop {
+  margin:5px;
+  padding:0px;
+  list-style:none;
+  display:none;
+}
+.dmenuitem {
+  display:block;
+  background:#345;
+  padding:0;
+  margin:0;
+  width:120px;
+  height:30px;
+  line-height: 30px;
+  border:1px solid #000;
+}
+.dmenutopitem:hover, .dmenuitem:hover {
+  background:#567;
+}
+.dmenuitem input {
+  float:left;
+  display:block;
+}
+#menubar {
+  display:flex;
+  position:absolute;
+  top:30px;
+  left:120px;
+  vertical-align: middle;
+}
+#menubar button {
+  display:flex;
+  font-size:12px;
+  width:50px;
+  height:30px;
+  border-radius:3px;
+}
+#menubar input {
+  display:none;
+}
+#menubar label {
+  display:flex;
+  font-size:12px;
+  line-height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  background:#eee;
+  width:50px;
+  height:28px;
+  margin:1px;
+  border-radius:3px;
+}
+#menubar img {
+  height:20px;
+  margin:auto;
+  top:0; bottom:0;
+}
+#menubar label:hover {
+  background:#eee;
+}
+#menubar input:checked + label {
+  background:#88f;
+  color:#fff;
+}
+#menubar input:checked + label:hover {
+  background:#aaf;
+  color:#fff;
+}
+#modal {
+  display:none;
+  position:absolute;
+  left:0;
+  top:0;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0, 0.5);
+  z-index:30;
+}
+.modalDialog {
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  width:280px;
+  height:80px;
+  background:#345;
+  margin:auto;
+  border:1px solid #000;
+  border-radius:3px;
+  color:#fff;
+  font-size:12px;
+  padding:5px;
+}
+.modalDialog div {
+  margin:5px auto;
+}
+.modalDialog input {
+  width:35px;
+  text-align:center;
+  font-size:12px;
+}
+.modalDialog button {
+  width:70px;
+  font-size: 12px;
+}
+.modalMenu {
+  position:absolute;
+  background:#345;
+  border:1px solid #000;
+  border-radius:3px;
+  color:#fff;
+  font-size:12px;
+  padding:5px;
+}
+.modalMenu button {
+  width:100%;
+}
+#modalFile {
+}
+#modalImageSize {
+}
+.texture {
+  display:none;
+}
+#contextmenu {
+  display:none;
+  width:120px;
+  height:100px;
+  position:absolute;
+  background:#345;
+  color:#fff;
+  padding:2px 6px;
+  font-size:13px;
+}
+.contextmenuitem:hover {
+  background:#567;
+}
+#statusbar {
+  font-size:12px;
+  position:absolute;
+  left:165px;
+  bottom:0;
+  width:120px;
+  height:25px;
+  background:#345;
+  color:#fff;
+}
+</style>
+</head>
+<body>
+
+  <div id="base">
+
+  <canvas id="canvas1" width="1024" height="768"></canvas>
+  <canvas id="canvas2" width="1024" height="768"></canvas>
+  <div id="objpane">
+    <div class="panetitle">Objects</div>
+    <div id="objviewbase">
+    <ul id="objview">
+
+    </ul>
+    </div>
+  </div>
+  <div id="proppane">
+    <div class="panetitle">Properties</div>
+    <div id="propviewbase">
+      <ul id="propview">
+        <li id="propPos"><div class="vgroup">Pos</div>
+          <ul>
+            <li class="vvalue"><div>XY</div><input id="prop.x" data-type="num"><div class="vvalueIcon" id="vval.prop.x"></div> - <input id="prop.y" data-type="num"><div class="vvalueIcon" id="vval.prop.y"></div></li>
+            <li class="vvalue"><div>Size</div><input id="prop.w" data-type="num"><div class="vvalueIcon" id="vval.prop.w"></div> - <input id="prop.h" data-type="num"><div class="vvalueIcon" id="vval.prop.h"></div></li>
+            <li class="vvalue"><div>Rotate</div><input id="prop.rotate" data-type="num" data-min="-360" data-max="360" data-step="1"><div class="vvalueIcon" id="vval.prop.rotate"></div></li>
+          </ul>
+        </li>
+        <li id="propCorner"><div class="vgroup">Corner</div>
+          <ul>
+            <li class="vvalue"><div>Sep</div><input id="prop.rxSep" type="checkbox" data-type="check"></li>
+            <li class="vvalue"><div>Top</div><input id="prop.rx1" data-type="num" data-min="0"><div class="vvalueIcon" id="vval.prop.rx1"></div> - <input id="prop.rx2" data-type="num" data-min="0"><div class="vvalueIcon" id="vval.prop.rx2"></div></li>
+            <li class="vvalue"><div>Bottom</div><input id="prop.rx4" data-type="num" data-min="0"><div class="vvalueIcon" id="vval.prop.rx4"></div> - <input id="prop.rx3" data-type="num" data-min="0"><div class="vvalueIcon" id="vval.prop.rx3"></div></li>
+          </ul>
+        </li>
+        <li id="propPoly"><div class="vgroup">Polygon</div>
+          <ul>
+            <li class="vvalue"><div>Vertex</div><input id="prop.polyVertex" data-type="num" data-min="3"><div class="vvalueIcon" id="vval.prop.polyVertex"></div></li>
+            <li class="vvalue"><div>Depth</div><input id="prop.polyDepth" data-type="num" data-min="0" data-max="100"><div class="vvalueIcon" id="vval.prop.polyDepth"></div></li>
+            <li class="vvalue"><div>TopWidth</div><input id="prop.polyTopWidth" data-type="num" data-min="0" data-max="50"><div class="vvalueIcon" id="vval.prop.polyTopWidth"></div></li>
+            <li class="vvalue"><div>BottomWidth</div><input id="prop.polyBottomWidth" data-type="num" data-min="0" data-max="50"><div class="vvalueIcon" id="vval.prop.polyBottomWidth"></div></li>
+          </ul>
+        </li>
+        <li id="propText"><div class="vgroup">Text</div>
+          <ul>
+            <li class="vvalue"><div>Text</div><input id="prop.text" class="vtext"></li>
+            <li class="vvalue"><div>Font</div><select id="prop.font" data-type="sel">
+              <option>sans-serif</option>
+              <option>serif</option>
+              <option>monospace</option>
+              <option>cursive</option>
+              <option>fantasy</option>
+              <option>system-ui</option>
+            </select></li>
+            <li class="vvalue"><div>Bold</div><input id="prop.textBold" type="checkbox" data-type="check"></li>
+            <li class="vvalue"><div>Italic</div><input id="prop.textItalic" type="checkbox" data-type="check"></li>
+            <li class="vvalue"><div>Align</div><select id="prop.textAlign" data-type="sel">
+              <option>left</option>
+              <option>center</option>
+              <option>right</option>
+            </select></li>
+            <li class="vvalue"><div>Fit</div><input id="prop.textFit" type="checkbox" data-type="check"></li>
+          </ul>
+        </li>
+        <li id="propShape"><div class="vgroup">Shape</div>
+          <ul>
+            <li class="vvalue"><div>Close</div><input id="prop.shapeClose" type="checkbox" data-type="check" checked></li>
+            <li class="vvalue"><button id="shapeEdit">Shape Edit</button></li>
+          </ul>
+        </li>
+        <li id="propImage"><div class="vgroup">Image</div>
+          <ul>
+            <li class="vvalue"><div>Frames</div><input id="prop.imageFrames" data-type="num" data-min="1"><div class="vvalueIcon" id="vval.prop.imageFrames"></div></li>
+          </ul>
+        </li>
+        <li id="propColor"><div class="vgroup">Color</div>
+          <ul>
+            <input type="radio" id="rpropcolFill1" name="propcol" checked><label for="rpropcolFill1"><li class="vvalue"><div>Fill1</div><input class="colfocus" id="prop.colFill1" type="color" draggable="true"> <input class="colfocus" id="prop.colFill1Alpha" data-type="num" data-min="0" data-max="100"><div class="vvalueIcon" id="vval.prop.colFill1Alpha"></div></li></label>
+            <input type="radio" id="rpropcolFill2" name="propcol"><label for="rpropcolFill2"><li class="vvalue"><div>Fill2</div><input class="colfocus" id="prop.colFill2" type="color" draggable="true"> <input class="colfocus" id="prop.colFill2Alpha" data-type="num" data-min="0" data-max="100"><div class="vvalueIcon" id="vval.prop.colFill2Alpha"></div></li></label>
+            <input type="radio" id="rpropcolStroke" name="propcol"><label for="rpropcolStroke"><li class="vvalue"><div>Stroke</div><input class="colfocus" id="prop.colStroke" type="color" draggable="true"> <input class="colfocus" id="prop.colStrokeAlpha" data-type="num" data-min="0" data-max="100"><div class="vvalueIcon" id="vval.prop.colStrokeAlpha"></div></li></label>
+            <input type="radio" id="rpropcolShadow" name="propcol"><label for="rpropcolShadow"><li class="vvalue"><div>Shadow</div><input class="colfocus" id="prop.colShadow" type="color" draggable="true"></li></label>
+            <li><br><div id="prop.pal">
+              <div class="proppal" id="prop.colPal0" style="background:#000000"></div><div class="proppal" id="prop.colPal1" style="background:#0000ff"></div><div class="proppal" id="prop.colPal2" style="background:#00ff00"></div><div class="proppal" id="prop.colPal3" style="background:#00ffff"></div>
+              <div class="proppal" id="prop.colPal4" style="background:#ff0000"></div><div class="proppal" id="prop.colPal5" style="background:#ff00ff"></div><div class="proppal" id="prop.colPal6" style="background:#ffff00"></div><div class="proppal" id="prop.colPal7" style="background:#ffffff"></div><br>
+              <div class="proppal" id="prop.colPal8" style="background:#808080"></div><div class="proppal" id="prop.colPal9" style="background:#000080"></div><div class="proppal" id="prop.colPal10" style="background:#008000"></div><div class="proppal" id="prop.colPal11" style="background:#008080"></div>
+              <div class="proppal" id="prop.colPal12" style="background:#800000"></div><div class="proppal" id="prop.colPal13" style="background:#800080"></div><div class="proppal" id="prop.colPal14" style="background:#808000"></div><div class="proppal" id="prop.colPal15" style="background:#c0c0c0"></div>
+              <div class="proppal" id="prop.colPal16" style="background:#000000"></div><div class="proppal" id="prop.colPal17" style="background:#202020"></div><div class="proppal" id="prop.colPal18" style="background:#404040"></div><div class="proppal" id="prop.colPal19" style="background:#606060"></div>
+              <div class="proppal" id="prop.colPal20" style="background:#808080"></div><div class="proppal" id="prop.colPal21" style="background:#a0a0a0"></div><div class="proppal" id="prop.colPal22" style="background:#c0c0c0"></div><div class="proppal" id="prop.colPal23" style="background:#e0e0e0"></div>
+              <div class="proppal" id="prop.colPal24" style="background:#adff2f"></div><div class="proppal" id="prop.colPal25" style="background:#afeeee"></div><div class="proppal" id="prop.colPal26" style="background:#b0c4de"></div><div class="proppal" id="prop.colPal27" style="background:#b0e0e6"></div>
+              <div class="proppal" id="prop.colPal28" style="background:#b22222"></div><div class="proppal" id="prop.colPal29" style="background:#b8860b"></div><div class="proppal" id="prop.colPal30" style="background:#ba55d3"></div><div class="proppal" id="prop.colPal31" style="background:#bc8f8f"></div>
+              <div class="proppal" id="prop.colPal32" style="background:#bdb76b"></div><div class="proppal" id="prop.colPal33" style="background:#c0c0c0"></div><div class="proppal" id="prop.colPal34" style="background:#c71585"></div><div class="proppal" id="prop.colPal35" style="background:#cd5c5c"></div>
+              <div class="proppal" id="prop.colPal36" style="background:#cd853f"></div><div class="proppal" id="prop.colPal37" style="background:#d2691e"></div><div class="proppal" id="prop.colPal38" style="background:#d2b48c"></div><div class="proppal" id="prop.colPal39" style="background:#d3d3d3"></div>
+            </div></li>
+            <li class="vvalue"><div>Gradation</div><select id="prop.colGradation" data-type="sel">
+              <option>none</option>
+              <option>linear</option>
+              <option>symmetric</option>
+              <option>radial</option>
+            </select> : <button id="gradEdit">Pos</button></li>
+          </ul>
+        </li>
+        <li id="propFill"><div class="vgroup">Fill</div>
+          <ul>
+            <li class="vvalue"><div>Fill</div><input id="prop.fill" type="checkbox" data-type="check"></li>
+            <li class="vvalue"><div>Stroke</div><input id="prop.stroke" type="checkbox" data-type="check"></li>
+            <li class="vvalue"><div>LineWidth</div><input id="prop.lineWidth" data-type="num" data-min="1" data-step="0.1"><div class="vvalueIcon" id="vval.prop.lineWidth"></div></li>
+            <li class="vvalue"><div>LineJoin</div><select id="prop.lineJoin" data-type="sel">
+              <option>round</option>
+              <option>bevel</option>
+              <option>miter</option>
+            </select></li>
+            <li class="vvalue"><div>LineCap</div><select id="prop.lineCap" data-type="sel">
+              <option>butt</option>
+              <option>round</option>
+              <option>square</option>
+            </select></li>
+            <li class="vvalue"><div>Blur</div><input id="prop.blur" data-type="num" data-min="0" data-step="0.1"><div class="vvalueIcon" id="vval.prop.blur"></div></li>
+          </ul>
+        </li>
+        <li id="propEmboss"><div class="vgroup">Emboss</div>
+          <ul>
+            <li class="vvalue"><div>Width</div><input id="prop.embossWidth" data-type="num" data-min="0" data-step="0.1"><div class="vvalueIcon" id="vval.prop.embossWidth"></div></li>
+            <li class="vvalue"><div>Depth</div><input id="prop.embossDepth" data-type="num" data-min="0" data-max="100"><div class="vvalueIcon" id="vval.prop.embossDepth"></div></li>
+            <li class="vvalue"><div>Blur</div><input id="prop.embossBlur" data-type="num" data-min="0" data-max="100"><div class="vvalueIcon" id="vval.prop.embossBlur"></div></li>
+          </ul>
+        </li>
+        <li id="propTexture"><div class="vgroup">Texture</div>
+          <ul>
+            <li class="vvalue"><div>Type</div><select id="prop.textureType" data-type="sel"></select></li>
+            <li class="vvalue"><div>Depth</div><input id="prop.textureDepth" data-type="num" data-min="0" data-max="100" data-step="0.1"><div class="vvalueIcon" id="vval.prop.textureDepth"></div></li>
+            <li class="vvalue"><div>Zoom</div><input id="prop.textureZoom" data-type="num" data-min="10" data-max="400"><div class="vvalueIcon" id="vval.prop.textureZoom"></div></li>
+          </ul>
+        </li>
+        <li id="propShadow"><div class="vgroup">Shadow</div>
+          <ul>
+            <li class="vvalue"><div>OffX</div><input id="prop.shadowOffX" data-type="num"><div class="vvalueIcon" id="vval.prop.shadowOffX"></div></li>
+            <li class="vvalue"><div>OffY</div><input id="prop.shadowOffY" data-type="num"><div class="vvalueIcon" id="vval.prop.shadowOffY"></div></li>
+            <li class="vvalue"><div>Depth</div><input id="prop.shadowDepth" data-type="num" data-min="0" data-max="100"><div class="vvalueIcon" id="vval.prop.shadowDepth"></div></li>
+            <li class="vvalue"><div>Blur</div><input id="prop.shadowBlur" data-type="num" data-min="0" data-max="100"><div class="vvalueIcon" id="vval.prop.shadowBlur"></div></li>
+          </ul>
+        </li>
+        <li><br></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="menubase">
+  <img src="./images/Img/g200kg160x80.png" style="width:110px;margin:5px">
+  <div style="position:absolute;top:5px;left:120px;color:#ccf;font-family:cursive;font-size:18px">WebDrawman</div>
+  <div id="menubar">
+    <button id="file" title="File">File</button>
+    <button id="edit" title="Edit">Edit</button> |
+    <button id="objUp" title="Object Move to Foreground"><img id="objUp#Icon" src="./images/Icon/objup.png" class="icon"></button>
+    <button id="objDown" title="Object Move to Background"><img id="objDown#Icon" src="./images/Icon/objdown.png" class="icon"></button>
+    <button id="objDup" title="Dupicate Object"><img id="objDup#Icon" src="./images/Icon/objdup.png" class="icon"></button>
+    <button id="objDel" title="Delete Object"><img id="objDel#Icon" src="./images/Icon/objdel.png" class="icon"></button> |
+    <button id="zoomOut" title="Zoom Out"><img id="zoomOut#Icon" src="./images/Icon/zoomOut.png" class="icon"></button>
+    <button id="zoom1" title="Zoom 1"><img id="zoom1#Icon" src="./images/Icon/zoom1.png" class="icon"></button>
+    <button id="zoomIn" title="Zoom In"><img id="zoomIn#Icon" src="./images/Icon/zoomin.png" class="icon"></button> |
+    <input type="radio" id="toolHand" name="tool" checked><label title="Scroll" for="toolHand"><img src="./images/Icon/toolhand.png"/></label>
+    <input type="radio" id="toolSelect" name="tool" checked><label title="Select" for="toolSelect"><img src="./images/Icon/toolsel.png"/></label>
+    <input type="radio" id="toolRect" name="tool"><label title="Rect" for="toolRect"><img src="./images/Icon/toolrect.png"></label>
+    <input type="radio" id="toolCircle" name="tool"><label title="Circle" for="toolCircle"><img src="./images/Icon/toolcircle.png"></label>
+    <input type="radio" id="toolText" name="tool"><label title="Text" for="toolText"><img src="./images/Icon/tooltext.png"></label>
+    <input type="radio" id="toolPolygon" name="tool"><label title="Polygon" for="toolPolygon"><img src="./images/Icon/toolpolygon.png"></label>
+    <input type="radio" id="toolShape" name="tool"><label title="Shape" for="toolShape"><img src="./images/Icon/toolshape.png"></label>
+    <input type="radio" id="toolImage" name="tool"><label title="Image" for="toolImage"><img src="./images/Icon/toolimage.png"></label> |
+    <button id="grid" title="Grid Settings">Grid</button>
+    <input type="checkbox" id="gridShow" checked><label title="Show Grid" for="gridShow"><img src="./images/Icon/gridshow.png" class="icon"></label>
+    <input type="checkbox" id="gridEnable" checked><label title="Enable Grid" for="gridEnable"><img src="./images/Icon/griden.png" class="icon"></label>
+  </div>
+  <!--<div>
+    <ul id="dmenu">
+      <li class="dmenutopitem">Tools
+        <ul class="dmenudrop">
+          <li class="dmenuitem" id="menu-Tools-Select"><input type="radio" name="menu-tools" checked> Select</li>
+          <li class="dmenuitem" id="menu-Tools-Rect"><input type="radio" name="menu-tools"> Rect</li>
+          <li class="dmenuitem" id="menu-Tools-Circle"><input type="radio" name="menu-tools"> Circle</li>
+        </ul>
+      </li>
+      <li class="dmenutopitem">View
+        <ul class="dmenudrop">
+          <li class="dmenuitem"><input type="checkbox" checked>Show Grid</li>
+        </ul>
+      </li>
+    </ul>
+  </div>-->
+  <div id="contextmenu"></div>
+  <div id="modal">
+    <div class="modalMenu" id="modalFile" style="margin-left:10px;margin-top:70px">
+      <div>File</div>
+      <div>
+        <button id="modalSettings">Document Settings</button><br>
+        <hr>
+        <button id="modalFileLoad">Load skin.json</button><br>
+        <button id="modalFileSave">Save skin.json</button><br>
+        <button id="modalFileExport">Export as png</button><br>
+        <hr>
+        <button id="modalPalLoad">Load pal.json</button><br>
+        <button id="modalPalSave">Save pal.json</button><br>
+        <button id="modalFileCancel">Cancel</button><br>
+      </div>
+    </div>
+    <div class="modalMenu" id="modalEdit" style="margin-left:70px;margin-top:70px">
+      <div>Edit</div>
+      <div>
+        <button id="modalEditRename">Rename object</button><br>
+        <button id="modalEditDelete">Delete object</button><br>
+        <button id="modalEditDuplicate">Duplicate object</button><br>
+        <button id="modalEditCopy">Copy object</button><br>
+        <button id="modalEditPaste">Paste object</button><br>
+        <hr>
+        <button id="modalEditCancel">Cancel</button><br>
+      </div>
+    </div>
+    <div class="modalDialog" id="modalImageSize">
+      <div>Image Size</div>
+      <div style="margin-left:10px"><span>X - Y</span> : <input id="modalImageSizeX"> <input id="modalImageSizeY"></div>
+      <div style="float:right"><button id="modalImageSizeOK">OK</button> <button id="modalImageSizeCancel">Cancel</button></div>
+    </div>
+    <div class="modalDialog" id="modalGrid">
+      <div>Grid Settings</div>
+      <div style="margin-left:10px"><span>X</span> <input id="modalGridX">  <span>Y</span> <input id="modalGridY"></div>
+      <div style="float:right"><button id="modalGridOK">OK</button> <button id="modalGridCancel">Cancel</button></div>
+    </div>
+    <div class="modalDialog" id="modalRename">
+      <div>
+        <div id="modalRenameText">Rename</div>
+        <input id="modalRenameInput" style="width:250px;text-align:left;">
+        <button id="modalRenameOK">OK</button>
+        <button id="modalRenameCancel">Cancel</button>
+      </div>
+    </div>
+    <div class="modalDialog" id="modalConfirm">
+      <div>
+        <div id="modalConfirmText">Confirm</div>
+        <button id="modalConfirmOK">OK</button>
+        <button id="modalConfirmCancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<canvas id="canvas3" width="1024" height="768" style="border:1px solid #00f"></canvas>
+<canvas id="canvas4" width="1024" height="768" style="border:1px solid #00f;background:#00f"></canvas>
+<canvas id="canvas5" width="1024" height="768" style="border:1px solid #f00;background:#f00"></canvas>
+<canvas id="canvas6" width="1024" height="768" style="border:1px solid #f00;background:#f00"></canvas>
+<div id="statusbar"></div>
+
+</body>
+</html>

@@ -738,9 +738,9 @@ class ObjView {
             t = e.t;
             ts = "";
             while(t > 1)
-                ts += "<img src='./images/Icon/LineI.png' width='16'>", --t;
+                ts += "<img src='./images/Icon/obj_i.png' width='16'>", --t;
             if(t)
-                ts += "<img src='./images/Icon/LineT.png' width='16'>";
+                ts += "<img src='./images/Icon/obj_t.png' width='16'>";
             st.push({f:f, t:e.t, o:obj});
         }
         let t2 = "";
@@ -764,13 +764,13 @@ class ObjView {
             const f = st[i].f;
             const name = (obj.name == null)?obj.type:obj.name;
             let tab = st[i].tabc.join("");
-            tab = tab.replaceAll("I","<img src='./images/Icon/lineI.png' width='16'>");
+            tab = tab.replaceAll("I","<img src='./images/Icon/obj_i.png' width='16'>");
 //            tab = tab.replaceAll("T", "┃");
-            tab = tab.replaceAll("N","<img src='./images/Icon/lineN.png' width='16'>");
+            tab = tab.replaceAll("N","<img src='./images/Icon/obj_n.png' width='16'>");
 //            tab = tab.replaceAll("N", " ");
-            tab = tab.replace("T","<img src='./images/Icon/lineT.png' width='16'>");
+            tab = tab.replace("T","<img src='./images/Icon/obj_t.png' width='16'>");
 //            tab = tab.replace("T", "┣");
-            tab = tab.replace("L","<img src='./images/Icon/lineL.png' width='16'>");
+            tab = tab.replace("L","<img src='./images/Icon/obj_l.png' width='16'>");
 //            tab = tab.replace("L","┗");
             h += `<li id="${obj.id}" draggable="true" ${f}><input class="objv" type="checkbox" ${obj.visible?"checked":""}/><input class="objl" type="checkbox" ${obj.lock?"checked":""}/>${tab}${name}</li>`;
         }

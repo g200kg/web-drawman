@@ -1,0 +1,455 @@
+{
+ "document": {
+  "width": 1024,
+  "height": 768,
+  "grid": {
+   "x": 8,
+   "y": 8
+  }
+ },
+ "palette": [
+  "#000000",
+  "#0000ff",
+  "#00ff00",
+  "#00ffff",
+  "#ff0000",
+  "#ff00ff",
+  "#ffff00",
+  "#ffffff",
+  "#808080",
+  "#000080",
+  "#008000",
+  "#008080",
+  "#800000",
+  "#800080",
+  "#808000",
+  "#c0c0c0",
+  "#000000",
+  "#202020",
+  "#404040",
+  "#606060",
+  "#808080",
+  "#a0a0a0",
+  "#c0c0c0",
+  "#e0e0e0",
+  "#adff2f",
+  "#afeeee",
+  "#b0c4de",
+  "#b0e0e6",
+  "#b22222",
+  "#b8860b",
+  "#ba55d3",
+  "#bc8f8f",
+  "#bdb76b",
+  "#c0c0c0",
+  "#c71585",
+  "#cd5c5c",
+  "#cd853f",
+  "#d2691e",
+  "#d2b48c",
+  "#d3d3d3"
+ ],
+ "root": {
+  "type": "Group",
+  "name": "root",
+  "id": "ec3474ae-6845-4c61-921d-054f897d4829",
+  "parent": null,
+  "x": 0,
+  "y": 0,
+  "w": 1024,
+  "h": 768,
+  "visible": true,
+  "lock": false,
+  "rotate": 0,
+  "list": [
+   {
+    "type": "Rect",
+    "name": null,
+    "id": "4ffc5214-21dc-4ec0-8c25-49c4d85c4811",
+    "parent": "ec3474ae-6845-4c61-921d-054f897d4829",
+    "x": 408,
+    "y": 192,
+    "w": 240,
+    "h": 136,
+    "visible": true,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "rxSep": false,
+    "rx1": 0,
+    "rx2": 0,
+    "rx3": 0,
+    "rx4": 0,
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Rect",
+    "name": null,
+    "id": "cc0cc019-ebe1-43f3-a885-77fa896211b6",
+    "parent": "ec3474ae-6845-4c61-921d-054f897d4829",
+    "x": 352,
+    "y": 128,
+    "w": 200,
+    "h": 104,
+    "visible": true,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "rxSep": false,
+    "rx1": 0,
+    "rx2": 0,
+    "rx3": 0,
+    "rx4": 0,
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Shape",
+    "name": null,
+    "id": "0905a988-9092-4da8-86b0-1d6991fe7233",
+    "parent": "ec3474ae-6845-4c61-921d-054f897d4829",
+    "x": 408,
+    "y": 104,
+    "w": 208,
+    "h": 184,
+    "visible": true,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "shape": [
+     {
+      "x": 504,
+      "y": 104
+     },
+     {
+      "x": 504,
+      "y": 104
+     },
+     {
+      "x": 504,
+      "y": 104
+     },
+     {
+      "x": 616,
+      "y": 224
+     },
+     {
+      "x": 616,
+      "y": 224
+     },
+     {
+      "x": 616,
+      "y": 224
+     },
+     {
+      "x": 528,
+      "y": 232
+     },
+     {
+      "x": 528,
+      "y": 232
+     },
+     {
+      "x": 528,
+      "y": 232
+     },
+     {
+      "x": 536,
+      "y": 280
+     },
+     {
+      "x": 536,
+      "y": 280
+     },
+     {
+      "x": 536,
+      "y": 280
+     },
+     {
+      "x": 488,
+      "y": 288
+     },
+     {
+      "x": 488,
+      "y": 288
+     },
+     {
+      "x": 488,
+      "y": 288
+     },
+     {
+      "x": 472,
+      "y": 216
+     },
+     {
+      "x": 472,
+      "y": 216
+     },
+     {
+      "x": 472,
+      "y": 216
+     },
+     {
+      "x": 408,
+      "y": 216
+     },
+     {
+      "x": 408,
+      "y": 216
+     },
+     {
+      "x": 408,
+      "y": 216
+     }
+    ],
+    "shapeOrgX": 408,
+    "shapeOrgY": 104,
+    "shapeOrgW": 208,
+    "shapeOrgH": 184,
+    "shapeClose": true,
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Shape",
+    "name": null,
+    "id": "eff4c796-def4-431a-95bb-df87c0c227a7",
+    "parent": "ec3474ae-6845-4c61-921d-054f897d4829",
+    "x": 384,
+    "y": 160,
+    "w": 240,
+    "h": 216,
+    "visible": true,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "shape": [
+     {
+      "x": 512,
+      "y": 376
+     },
+     {
+      "x": 512,
+      "y": 376
+     },
+     {
+      "x": 512,
+      "y": 376
+     },
+     {
+      "x": 384,
+      "y": 288
+     },
+     {
+      "x": 384,
+      "y": 288
+     },
+     {
+      "x": 384,
+      "y": 288
+     },
+     {
+      "x": 480,
+      "y": 264
+     },
+     {
+      "x": 480,
+      "y": 264
+     },
+     {
+      "x": 480,
+      "y": 264
+     },
+     {
+      "x": 464,
+      "y": 160
+     },
+     {
+      "x": 464,
+      "y": 160
+     },
+     {
+      "x": 464,
+      "y": 160
+     },
+     {
+      "x": 552,
+      "y": 160
+     },
+     {
+      "x": 552,
+      "y": 160
+     },
+     {
+      "x": 552,
+      "y": 160
+     },
+     {
+      "x": 552,
+      "y": 240
+     },
+     {
+      "x": 552,
+      "y": 240
+     },
+     {
+      "x": 552,
+      "y": 240
+     },
+     {
+      "x": 624,
+      "y": 256
+     },
+     {
+      "x": 624,
+      "y": 256
+     },
+     {
+      "x": 624,
+      "y": 256
+     }
+    ],
+    "shapeOrgX": 384,
+    "shapeOrgY": 160,
+    "shapeOrgW": 240,
+    "shapeOrgH": 216,
+    "shapeClose": true,
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   }
+  ],
+  "colFill1": "#8090a0",
+  "colFill1Alpha": 100,
+  "colFill2": "#202020",
+  "colFill2Alpha": 100,
+  "colStroke": "#000000",
+  "colStrokeAlpha": 100,
+  "colShadow": "#000000",
+  "colGradation": "none",
+  "colGradX1": 0.1,
+  "colGradY1": 0.1,
+  "colGradX2": 0.9,
+  "colGradY2": 0.9,
+  "fill": true,
+  "stroke": true,
+  "lineWidth": 1,
+  "lineJoin": "round",
+  "lineCap": "round",
+  "blur": 0,
+  "embossWidth": 4,
+  "embossDepth": 0,
+  "embossBlur": 50,
+  "textureType": "None",
+  "textureDepth": 0,
+  "textureZoom": 100,
+  "shadowOffX": 8,
+  "shadowOffY": 8,
+  "shadowDepth": 0,
+  "shadowBlur": 8
+ }
+}

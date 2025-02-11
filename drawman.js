@@ -25,7 +25,6 @@ class Obj {
         this.type = t;
         this.name = null;
         this.id = crypto.randomUUID();
-        this.parent = p?p.id:null;
         this.x = x;
         this.y = y;
         this.w = w;
@@ -100,79 +99,73 @@ class Obj {
         this.shadowDepth = 0;
         this.shadowBlur = 8;
     }
-    getId(obj) {
-        return obj.id;
+}
+class ObjRoot {
+    constructor() {
+        this.type = "Group";
+        this.list = [];
+        this.name = "root";
+        this.id = crypto.randomUUID();
+        this.visible = true;
     }
-    adjust() {
-        if(this.type == "Group") {
+    adjust(obj) {
+        if(obj.type == "Group") {
             let p1 = {x:99999, y:99999}, p2 = {x:-99999, y:-99999};
-            for(let o of this.entries(0,0,0)) {
+            for(let o of this.entries(obj, 0, 0, 0)) {
                 p1.x = Math.min(p1.x, o.x, o.x + o.w);
                 p1.y = Math.min(p1.y, o.y, o.y + o.h);
                 p2.x = Math.max(p2.x, o.x, o.x + o.w);
                 p2.y = Math.max(p2.y, o.y, o.y + o.h);
             }
-            this.x = p1.x, this.y = p1.y;
-            this.w = p2.x - p1.x, this.h = p2.y - p1.y;
+            obj.x = p1.x, obj.y = p1.y;
+            obj.w = p2.x - p1.x, obj.h = p2.y - p1.y;
         }
     }
     clear() {
         this.list = [];
     }
-    set(objlist) {
-        this.list = objlist;
+    add(parent, obj) {
+        parent.list.unshift(obj);
     }
-    add(obj) {
-        this.list.unshift(obj);
-    }
-    append(obj) {
-        this.list.push(obj);
+    append(parent, obj) {
+        parent.list.push(obj);
     }
     del(obj) {
-        const op = objRoot.getObj(obj.parent);
+        const s = this.parentPath(obj);
+        const op = s[0];
         const idx = op.list.indexOf(obj);
         op.list.splice(idx,1);
-    }
-    toggle(obj) {
-        if(this.isExist(obj))
-            this.del(obj);
-        else
-            this.add(obj);
-    }
-    len() {
-        let cnt = 0;
-        for(let o of this.entries(1, 0, 0)) {
-            ++cnt;
-        }
-        return cnt;
-    }
-    isExist(obj) {
-        for(let o of this.entries(1, 0, 0)) {
-            if(o == obj)
-                return true;
-        }
-        return false;
-    }
-    getIndex(obj) {
-        let cnt = 0;
-        for(let o of this.entries(1, 0, 0)) {
-            if(o == obj)
-                return cnt;
-            ++cnt;
-        }
-        return -1;
     }
     getObj(id) {
         if(this.id == id)
             return this;
-        for(let o of this.entries(1, 0, 0)) {
+        for(let o of this.entries(this, 1, 0, 0)) {
             if(o.id == id)
                 return o;
         }
         return null;
     }
+    len(obj) {
+        let cnt = 0;
+        for(let o of this.entries(obj, 1, 0, 0)) {
+            ++cnt;
+        }
+        return cnt;
+    }
+    moveObj(obj, dx, dy) {
+        for(let o of this.entries(obj, 1, 0, 0)) {
+            o.x += dx;
+            o.y += dy;
+        }
+        obj.x += dx;
+        obj.y += dy;
+        const s = this.parentPath(obj);
+        for(let o of s) {
+            this.adjust(o);
+        }
+    }
     findEntry(obj) {
-        for(let o of this.entries(1, 0, 1)) {
+        for(let o of this.entries(this, 1, 0, 1)) {
             if(o.o == obj)
                 return o;
         }
@@ -180,42 +173,52 @@ class Obj {
     }
     findNext(obj) {
         let f = false;
-        for(let o of this.entries(0, 0, 0)) {
-            if(f)
+        for(let o of this.entries(this, 0, 0, 0)) {
+            if(f) {
                 return o;
+            }
             if(o == obj)
                 f = true;
         }
     }
-    getRoot() {
-
-    }
-    findFirst() {
-        for(let o of this.entries(0, 0, 0)) {
-            return o;
+    parentPath(obj) {
+        const st = [];
+        let res;
+        function s(r, obj) {
+            for(let i = 0; i < r.list.length; ++i) {
+                const o = r.list[i];
+                if(o == obj) {
+                    res = st;
+                    return true;
+                }
+                if(o.type == "Group") {
+                    st.unshift(o);
+                    if(s(o, obj))
+                        return true;
+                    st.shift();
+                }
+            }
+            return false;
         }
+        st.push(this);
+        s(this, obj);
+        return res;
     }
-    move(dx, dy) {
-        for(let o of this.entries(1, 0, 0)) {
-            o.x += dx;
-            o.y += dy;
+    isVisible(obj) {
+        if(!obj.visible)
+            return false;
+        for(let o of this.parentPath(obj)) {
+            if(!o.visible)
+                return false;
         }
-        this.x += dx;
-        this.y += dy;
-        for(let o = objRoot.getObj(this.parent); o != objRoot; o = objRoot.getObj(o.parent)) {
-            o.adjust();
-        }
+        return true;
     }
-    size(dw, dh) {
-        for(let o of this.entries(1, 0, 0)) {
-        }
-    }
-    entries(r, b, e) {
+    entries(obj, r, b, e) {
         if(r) {
             if(b) {
                 return {
                     [Symbol.iterator]: ()=>{
-                        let res, list = this.list, cnt = list.length - 1, st = [];
+                        let res, list = obj.list, cnt = list.length - 1, st = [];
                         return {
                             next : ()=>{
                                 while(list[cnt] && list[cnt].type == "Group") {
@@ -241,7 +244,7 @@ class Obj {
             else {
                 return {
                     [Symbol.iterator]: ()=>{
-                        let o, res, list = this.list, cnt = 0, st = [];
+                        let o, res, list = obj.list, cnt = 0, st = [];
                         return {
                             next : ()=>{
                                 while(cnt >= list.length || cnt < 0) {
@@ -251,7 +254,7 @@ class Obj {
                                 }
                                 o = res = list[cnt];
                                 if(e)
-                                    res = {l:list, c:cnt, t:st.length, o:o};
+                                    res = {l:list, c:cnt, t:st.length, st:st, o:o};
                                 ++cnt;
                                 if(o.type == "Group") {
                                     st.push([list, cnt]);
@@ -270,15 +273,15 @@ class Obj {
                 [Symbol.iterator]: ()=>{
                     let cnt = 0, dcnt = 1, res;
                     if(b)
-                        cnt = this.list.length - 1, dcnt = -1;
+                        cnt = obj.list.length - 1, dcnt = -1;
                     return {
                         next : ()=>{
-                            if(cnt >= this.list.length || cnt < 0)
+                            if(cnt >= obj.list.length || cnt < 0)
                                 return {value:undefined, done:true};
                             if(e)
-                                res = {value:{l:this.list, c:cnt, t:0, o:this.list[cnt]}, done:false};
+                                res = {value:{l:obj.list, c:cnt, t:0, o:obj.list[cnt]}, done:false};
                             else
-                                res = {value:this.list[cnt], done:false};
+                                res = {value:obj.list[cnt], done:false};
                             cnt += dcnt;
                             return res;
                         }
@@ -288,16 +291,46 @@ class Obj {
         }
     }
 }
-
-class ObjSel extends Obj {
+class ObjSel {
     constructor() {
-        super("Group", null, 0, 0, 100, 100);
         this.name = "objSel";
+        this.list = [];
         this.pt1 = {x:99999, y:99999};
         this.pt2 = {x:-99999, y:-99999};
-        console.log("objSel",this.list)
+//        console.log("objSel",this.list)
     }
-    getSelBox() {
+    clear() {
+        this.list = [];
+    }
+    len() {
+        return this.list.length;
+    }
+    isSel(obj) {
+        return this.list.includes(obj);
+    }
+    add(obj) {
+        if(!this.isSel(obj)) {
+            this.list.push(obj);
+        }
+    }
+    del(obj) {
+        const idx = this.list.indexOf(obj);
+        if(idx >= 0)
+            this.list.splice(idx, 1);
+    }
+    toggle(obj) {
+        if(this.isSel(obj))
+            this.del(obj);
+        else
+            this.add(obj);
+    }
+    sel(obj) {
+        this.clear();
+        this.add(obj);
+        editor.curObj = obj;
+        editor.propView.sel(obj);
+     }
+     getSelBox() {
         this.pt1.x = this.pt1.y = this.pt2.x = this.pt2.y = 99999;
         for(let i in this.list) {
             const o = this.list[i];
@@ -316,69 +349,58 @@ class ObjSel extends Obj {
             }
         }
     }
-    sel(obj) {
-       this.clear();
-       this.add(obj);
-       editor.curObj = obj;
-       editor.propView.sel(obj);
-    }
-    isSel(obj) {
-        return this.isExist(obj);
-    }
     areaSel(pt1, pt2) {
         const p1 = {x:Math.min(pt1.x, pt2.x), y:Math.min(pt1.y, pt2.y)};
         const p2 = {x:Math.max(pt1.x, pt2.x), y:Math.max(pt1.y, pt2.y)};
         this.clear();
-        for(let o of objRoot.entries(0, 0, 1)) {
+        for(let o of objRoot.entries(objRoot, 0, 0, 1)) {
             const ob = o.o;
-            if(ob.visible && p1.x <= ob.x && p1.y <= ob.y && p2.x >= ob.x + ob.w && p2.y >= ob.y + ob.h)
+            if(objRoot.isVisible(ob) && p1.x <= ob.x && p1.y <= ob.y && p2.x >= ob.x + ob.w && p2.y >= ob.y + ob.h)
                 this.add(ob);
         }
         this.getSelBox();
         editor.objView.build();
     }
     moveSel(dx, dy) {
-        for(let o of this.entries(0, 0, 0)) {
-            o.move(dx, dy);
+        console.log("moveSel")
+        for(let o of this.list) {
+            objRoot.moveObj(o, dx, dy);
         }
     }
     delGroup() {
         for(let i in this.list) {
             const g = this.list[i];
+            const s = objRoot.parentPath(g);
+            const p = s[0];
             if(g.type == "Group") {
-                const pid = g.parent;
-                const p = objRoot.getObj(pid);
                 objRoot.del(g);
-                objSel.del(g);
+                this.del(g);
                 let o;
                 for(let j = g.list.length -1; j >= 0; --j) {
                     o = g.list[j];
-                    o.parent = pid;
                     p.list.unshift(o);
                 }
-                objSel.sel(o);
+                this.sel(o);
             }
         }
-//        editor.objView.build();
         editor.redraw();
     }
     makeGroup() {
         const g = new Obj("Group", objRoot, 0, 0, 100, 100);
-        for(let o of this.entries(0, 0, 0)) {
-            const oldp = objRoot.getObj(o.parent);
-            oldp.del(o);
-            o.parent = g.id;
-            g.add(o);
+        for(let i = this.list.length -1; i >= 0; --i) {
+            const o = this.list[i];
+            objRoot.del(o);
+            objRoot.add(g, o);
         }
-        g.adjust();
-        objRoot.add(g);
+        objRoot.adjust(g);
+        objRoot.add(objRoot, g);
         this.clear();
         this.add(g);
         editor.curObj = g;
         editor.objView.build();
     }
     vupdate() {
-        for(let o of this.entries(1, 0, 0)) {
+        for(let o of objRoot.entries(this, 1, 0, 0)) {
             delete o.temp;
         }
     }
@@ -392,10 +414,14 @@ class ObjSel extends Obj {
             pv.yElm.value = o.y = pt1.y;
             pv.wElm.value = o.w = pt2.x - pt1.x;
             pv.hElm.value = o.h = pt2.y - pt1.y;
+            const s = objRoot.parentPath(o);
+            for(o of s) {
+                objRoot.adjust(o);
+            }
             return;
         }
 
-        for(let o of this.entries(1, 0, 0)) {
+        for(let o of objRoot.entries(objSel, 1, 0, 0)) {
             if(!o.temp) {
                 o.temp = {};
                 o.temp.x = o.x;
@@ -423,208 +449,11 @@ class ObjSel extends Obj {
                 pv.wElm.value = o.w;
                 pv.hElm.value = o.h;
             }
+            console.log(o);
         }
         this.getSelBox();
     }
 }
-/*
-class ObjSel2 {
-    constructor() {
-        this.list = [];
-        this.pt1 = {x:99999, y:99999};
-        this.pt2 = {x:-99999, y:-99999};
-    }
-    clear() {
-        this.list = [];
-        editor.curObj = null;
-        this.vupdate();
-        this.getSelBox();
-        editor.objView.build();
-    }
-    len() {
-        return this.list.length;
-    }
-    set(obj) {
-        if(obj == null)
-            this.clear();
-        else {
-            this.list = [obj];
-            editor.curObj = obj;
-            this.vupdate();
-        }
-        this.getSelBox();
-        editor.objView.build();
-    }
-    add(obj) {
-        if(obj != null) {
-            if(editor.curObj == null)
-                editor.curObj = obj;
-            this.list.push(obj);
-            this.getSelBox();
-            editor.objView.build();
-            this.vupdate();
-        }
-    }
-    del(obj) {
-        const i = this.list.indexOf(obj);
-        if(i >= 0) {
-            this.list.splice(i,1);
-            editor.curObj = this.list[0];
-            this.getSelBox();
-            editor.objView.build();
-            this.vupdate();
-        }
-    }
-    delSel() {
-        for(let i = 0; i < this.list.length; ++i) {
-            const o = this.list[i];
-            objRoot.del(o);
-        }
-    }
-    isSel(obj) {
-        return this.list.includes(obj);
-    }
-    delGroup() {
-        for(let i in this.list) {
-            const g = this.list[i];
-            const pid = g.parent;
-            const p = objRoot.getObj(pid);
-            objRoot.del(g);
-            for(let j = g.list.length -1; j >= 0; --j) {
-                const o = g.list[j];
-                o.parent = pid;
-//                console.log(o);
-                p.list.unshift(o);
-            }
-
-        }
-        editor.objView.build();
-    }
-    makeGroup() {
-        let o;
-        const g = new Obj("Group", objRoot, 0, 0, 100, 100);
-
-        for(let i in this.list) {
-            o = this.list[i];
-            const oldp = objRoot.getObj(o.parent);
-            oldp.del(o);
-            o.parent = g.id;
-            g.append(o);
-        }
-        g.adjust();
-        objRoot.add(g);
-        this.set(g);
-        editor.objView.build();
-    }
-    getSelBox() {
-        this.pt1.x = this.pt1.y = this.pt2.x = this.pt2.y = 99999;
-        for(let i in this.list) {
-            const o = this.list[i];
-            const rot = new ptRot(o);
-            if(i == 0) {
-                this.pt1.x = rot.pt1.x;
-                this.pt1.y = rot.pt1.y;
-                this.pt2.x = rot.pt2.x;
-                this.pt2.y = rot.pt2.y;
-            }
-            else {
-                this.pt1.x = Math.min(this.pt1.x, rot.pt1.x);
-                this.pt1.y = Math.min(this.pt1.y, rot.pt1.y);
-                this.pt2.x = Math.max(this.pt2.x, rot.pt2.x);
-                this.pt2.y = Math.max(this.pt2.y, rot.pt2.y);
-            }
-        }
-    }
-    areaSel(pt1, pt2) {
-        const p1 = {x:Math.min(pt1.x, pt2.x), y:Math.min(pt1.y, pt2.y)};
-        const p2 = {x:Math.max(pt1.x, pt2.x), y:Math.max(pt1.y, pt2.y)};
-        this.clear();
-        for(let o of objRoot.entries(0, 0, 1)) {
-            const ob = o.o;
-            if(ob.visible && p1.x <= ob.x && p1.y <= ob.y && p2.x >= ob.x + ob.w && p2.y >= ob.y + ob.h)
-                this.add(ob);
-        }
-        this.getSelBox();
-        editor.objView.build();
-    }
-    move(dx, dy) {
-        const pv = editor.propView;
-        for(let i in this.list) {
-            const o = this.list[i];
-            o.move(dx, dy);
-            if(o == editor.curObj) {
-                pv.xElm.value = o.x;
-                pv.yElm.value = o.y;
-            }
-        }
-        this.getSelBox();
-    }
-    vmove(pt1, pt2, ptO1, ptO2) {
-        let pv;
-        let o = this.list[0];
-        if(this.list.length == 1 && o.rotate == 0) {
-            pv = editor.propView;
-            pv.xElm.value = o.x = pt1.x;
-            pv.yElm.value = o.y = pt1.y;
-            pv.wElm.value = o.w = pt2.x - pt1.x;
-            pv.hElm.value = o.h = pt2.y - pt1.y;
-            return;
-        }
-        for(let i in this.list) {
-            o = this.list[i];
-
-            if(!o.temp) {
-                o.temp = {};
-                o.temp.x = o.x;
-                o.temp.y = o.y;
-                o.temp.w = o.w;
-                o.temp.h = o.h;
-            }
-            let xx1 = pt1.x, yy1 = pt1.y, xx2 = pt2.x, yy2 = pt2.y;
-            if(ptO2.x != ptO1.x) {
-                xx1 = pt1.x + (o.temp.x - ptO1.x) * (pt2.x - pt1.x) / (ptO2.x - ptO1.x);
-                xx2 = pt1.x + (o.temp.x + o.temp.w - ptO1.x) * (pt2.x - pt1.x) / (ptO2.x - ptO1.x);
-            }
-            if(ptO2.y != ptO1.y) {
-                yy1 = pt1.y + (o.temp.y - ptO1.y) * (pt2.y - pt1.y) / (ptO2.y - ptO1.y);
-                yy2 = pt1.y + (o.temp.y + o.temp.h - ptO1.y) * (pt2.y - pt1.y) / (ptO2.y - ptO1.y);
-            }
-            o.x = xx1;
-            o.y = yy1;
-            o.w = xx2 - xx1;
-            o.h = yy2 - yy1;
-            if(o == editor.curObj) {
-                pv = editor.propView;
-                pv.xElm.value = o.x;
-                pv.yElm.value = o.y;
-                pv.wElm.value = o.w;
-                pv.hElm.value = o.h;
-            }
-        }
-        this.getSelBox();
-    }
-    vupdate() {
-        for(let i in this.list) {
-            const o = this.list[i];
-            delete o.temp;
-        }
-    }
-    isPtInSel(pt) {
-        if(isHit(pt, this.pt1))
-            return "v1";
-        if(isHit(pt, {x:this.pt2.x, y:this.pt1.y}))
-            return "v2";
-        if(isHit(pt, this.pt2))
-            return "v3";
-        if(isHit(pt, {x:this.pt1.x, y:this.pt2.y}))
-            return "v4";
-        if(pt.x >= this.pt1.x && pt.x <= this.pt2.x && pt.y >= this.pt1.y && pt.y <= this.pt2.y)
-            return "p";
-        return false;
-    }
-}
-*/
-
 function loadPattern(ctx) {
     const sel = document.getElementById("prop.textureType");
     for(let t in pattern) {
@@ -642,6 +471,7 @@ function loadPattern(ctx) {
     }
 
 }
+
 class Rot {
     constructor(th) {
         this.cs = Math.cos(th);
@@ -679,20 +509,18 @@ class ObjView {
             switch(e.target.tagName) {
             case "LI":
                 const oid = e.target.id;
+                const o = objRoot.getObj(oid);
                 if(e.ctrlKey) {
-                    objSel.toggle(objRoot.getObj(oid));
+                    objSel.toggle(o);
                 }
                 else {
-//                    editor.focus(oid);
-//                    objSel.clear();
-                    objSel.sel(objRoot.getObj(oid));
+                    objSel.sel(o);
                 }
                 editor.redraw();
                 break;
             }
         })
         this.elm.addEventListener("click", e=>{
-//            console.log("click")
             let p;
             switch(e.target.className){
             case "objv":
@@ -718,7 +546,7 @@ class ObjView {
         })
         this.elm.addEventListener("drop", e=>{
             const data = e.dataTransfer.getData("text/plain");
-            editor.objView.move(data, e.target.id);
+            editor.objView.moveTree(data, e.target.id);
             editor.redraw();
             e.preventDefault();
         })
@@ -726,7 +554,7 @@ class ObjView {
     build() {
         let h = "<ul>", st = [];
         let t, ts;
-        for(let e of objRoot.entries(1, 0, 1)) {
+        for(let e of objRoot.entries(objRoot, 1, 0, 1)) {
             let f = "class='obj'";
             const obj = e.o;
             if(editor && editor.curObj) {
@@ -765,33 +593,46 @@ class ObjView {
             const name = (obj.name == null)?obj.type:obj.name;
             let tab = st[i].tabc.join("");
             tab = tab.replaceAll("I","<img src='./images/Icon/obj_i.png' width='16'>");
-//            tab = tab.replaceAll("T", "┃");
             tab = tab.replaceAll("N","<img src='./images/Icon/obj_n.png' width='16'>");
-//            tab = tab.replaceAll("N", " ");
             tab = tab.replace("T","<img src='./images/Icon/obj_t.png' width='16'>");
-//            tab = tab.replace("T", "┣");
             tab = tab.replace("L","<img src='./images/Icon/obj_l.png' width='16'>");
-//            tab = tab.replace("L","┗");
             h += `<li id="${obj.id}" draggable="true" ${f}><input class="objv" type="checkbox" ${obj.visible?"checked":""}/><input class="objl" type="checkbox" ${obj.lock?"checked":""}/>${tab}${name}</li>`;
         }
         this.elm.innerHTML = h+"<li id='objEnd'><br></li></ul>";
     }
-    move(idFrom, idTo) {
-        let oTo, opTo, idxTo;
-        console.log(idFrom, idTo);
-        const oFrom = objRoot.getObj(idFrom);
+    moveTree(idFrom, idTo) {
+        console.log("move",idFrom, idTo)
+        let oFrom, oTo, opTo, idxTo;
+        if(idFrom == idTo)
+            return;
+        oFrom = objRoot.getObj(idFrom);
         if(!oFrom)
             return;
-        const opFrom = objRoot.getObj(oFrom.parent);
-        opFrom.del(oFrom);
-        if(idTo == "objEnd")
-            opTo = objRoot, idxTo = opTo.list.length;
+        const s = objRoot.parentPath(oFrom);
+        const opFrom = s[0];
+        if(idTo == "objEnd") {
+            opTo = objRoot;
+            idxTo = opTo.list.length;
+        }
         else {
-            oTo = objRoot.getObj(idTo); 
-            opTo = objRoot.getObj(oTo.parent);
+            oTo = objRoot.getObj(idTo);
+            const s = objRoot.parentPath(oTo);
+
+            for(let o of s) {
+                if(o == oFrom)
+                    return;
+            }
+
+            opTo = s[0];
             idxTo = opTo.list.indexOf(oTo);
         }
+        objRoot.del(oFrom);
+        if(opFrom.list.length == 0 && opFrom != objRoot) {
+            objRoot.del(opFrom);
+        }
         opTo.list.splice(idxTo,0, oFrom);
+        objRoot.adjust(opFrom);
+        objRoot.adjust(opTo);
     }
 }
 class PropView {
@@ -1025,6 +866,16 @@ class PropView {
             this.propShadowElm.style = "";
         }
         switch(obj.type) {
+        case "Group":
+            this.propCornerElm.style = "display:none";
+            this.propColorElm.style = "";
+            this.propFillElm.style = "display:none";
+            this.propEmbossElm.style = "display:none";
+            this.propPolyElm.style = "display:none";
+            this.propTextElm.style = "display:none";
+            this.propShapeElm.style = "display:none";
+            this.propImageElm.style = "display:none";
+            break;
         case "Rect":
             this.propCornerElm.style = "";
             this.propColorElm.style = "";
@@ -1462,7 +1313,7 @@ class Editor {
         this.objView = new ObjView(document.getElementById("objview"));
         this.propView = new PropView(document.getElementById("propview"));
         this.statusbarElm = document.getElementById("statusbar");
-        this.propView.sel(objRoot.getObj(0));
+        //this.propView.sel(getObj(0));
         this.contextMenuElm = document.getElementById("contextmenu");
         this.canvas1Elm = document.getElementById("canvas1");   // UI screen
         this.canvas2Elm = document.getElementById("canvas2");   // Grid screen
@@ -1693,7 +1544,7 @@ class Editor {
                     return;
                 }
                 if(this.newObj.w !=0 || this.newObj.h != 0) {
-                    objRoot.add(this.curObj = this.newObj);
+                    objRoot.add(objRoot, this.curObj = this.newObj);
                     objSel.clear();
                     objSel.add(this.curObj);
                 }
@@ -1778,7 +1629,7 @@ class Editor {
                     let p0, p1;
                     const nn = n - (n % 3);
                     if(n != undefined && eqPt(s[nn], s[nn + 1]) && eqPt(s[nn], s[nn + 2])) {
-                        s[n + 1] = s[n + 2] = s[n] = px2sp(this.curPtGrid, this.curObj);
+                        s[nn + 1] = s[nn + 2] = s[nn] = px2sp(this.curPtGrid, this.curObj);
                         this.redraw();
                         return;
                     }
@@ -1933,9 +1784,6 @@ class Editor {
         this.ready = true;
         this.redraw();
     }
-    moveObj() {
-
-    }
     editDup() {
 //        console.log("editDup");
         objClipboard = [];
@@ -1947,8 +1795,8 @@ class Editor {
         for(let i = objClipboard.length -1; i >= 0; --i) {
             const o = this.cloneObj(objClipboard[i]);
             o.id = crypto.randomUUID();
-            objSel.add(o);
-            objRoot.add(o);
+            objRoot.add(objRoot, o);
+            objSel.sel(o);
         }
         this.redraw();
     }
@@ -1958,13 +1806,14 @@ class Editor {
         this.menu.setModal("modalRename");
     }
     cloneObj(obj) {
+        let o;
         if(obj.type == "Image") {
-            const o = JSON.parse(JSON.stringify(obj));
+            o = JSON.parse(JSON.stringify(obj));
             this.prepareImage(o);
-            return o;
         }
         else
-            return structuredClone(obj);
+            o = structuredClone(obj);
+        return o;
     }
     editCopy() {
         console.log("editCopy");
@@ -1981,7 +1830,7 @@ class Editor {
             const o = this.cloneObj(objClipboard[i]);
             o.id = crypto.randomUUID();
             objSel.add(o);
-            objRoot.add(o);
+            objRoot.add(objRoot, o);
         }
         this.redraw();
     }
@@ -2001,7 +1850,7 @@ class Editor {
     }
     editMoveToTop() {
         const s = [];
-        for(let o of objRoot.entries(1, 1, 0)) {
+        for(let o of objRoot.entries(objRoot, 1, 1, 0)) {
             if(objSel.isSel(o)){
                 const e = objRoot.findEntry(o);
                 e.l.splice(e.c, 1);
@@ -2009,12 +1858,12 @@ class Editor {
             }
         }
         for(let i = 0; i < s.length; ++i) {
-            objRoot.add(s[i]);
+            objRoot.add(objRoot, s[i]);
         }
     }
     editMoveToBottom() {
         const s = [];
-        for(let o of objRoot.entries(1, 1, 0)) {
+        for(let o of objRoot.entries(objRoot, 1, 1, 0)) {
             if(objSel.isSel(o)){
                 const e = objRoot.findEntry(o);
                 e.l.splice(e.c, 1);
@@ -2022,7 +1871,7 @@ class Editor {
             }
         }
         for(let i = 0; i < s.length; ++i) {
-            objRoot.append(s[i]);
+            objRoot.append(objRoot, s[i]);
         }
     }
     editGroup() {
@@ -2058,16 +1907,16 @@ class Editor {
         }
         if(mode == "u") {
             let o = editor.curObj;
-            for(let i = objRoot.len(); i; --i) {
+            for(let i = objRoot.len(objRoot); i; --i) {
                 if(!(o = objRoot.findNext(o)))
-                    o = objRoot.findFirst();
-                if(o && o.visible && isInObj(pt, o)) {
+                    o = objRoot.list[0];
+                if(o && objRoot.isVisible(o) && isInObj(pt, o)) {
                     return {t:"q", o:o};
                 }
             }
         }
         const os = objSel;
-        if(os.len() > 0) {
+        if(objRoot.len(os) > 0) {
             if(isHit(pt, os.pt1))
                 return {t:"v", v:1};
             if(isHit(pt, {x:os.pt2.x, y:os.pt1.y}))
@@ -2109,7 +1958,7 @@ class Editor {
                 const o = new Obj("Image", objRoot, this.docw*0.5, this.doch*0.5, 0, 0);
                 o.img = reader.result;
                 this.prepareImage(o);
-                objRoot.add(o);
+                objRoot.add(objRoot, o);
                 this.propView.sel(this.newObj);
                 this.redraw();
             }
@@ -2415,16 +2264,6 @@ class Editor {
             }
 
             if(obj.embossWidth != 0 && obj.embossDepth != 0) {
-/*
-                this.ctx6.clearRect(0, 0, this.docw, this.doch);
-                this.drawPlainObj(this.ctx6, obj, true, false);
-                embossEdge(this.ctx6, this.ctx4, obj);
-                ctx.globalAlpha = obj.embossDepth * 0.01;
-                ctx.filter = `blur(${obj.embossWidth * obj.embossBlur * 0.01}px)`
-                ctx.globalCompositeOperation = "hard-light";
-                ctx.drawImage(this.canvas4Elm, 0, 0);
-*/
-
                 this.ctx4.save();
                 this.ctx5.save();
                 const bw = obj.embossWidth * obj.embossBlur * 0.01;
@@ -2671,7 +2510,7 @@ class Editor {
         const blob = new Blob([json], {type:"application/json"});
         let link = document.createElement("a");
         link.href = window.URL.createObjectURL(blob);
-        link.download = "untitled.pal.json";
+        link.download = "untitled.pal-json";
         link.click();
     }
     loadJson() {
@@ -2693,7 +2532,7 @@ class Editor {
         link.click();
     }
     saveJson() {
-        for(let o of objRoot.entries(1, 0, 0)) {
+        for(let o of objRoot.entries(objRoot, 1, 0, 0)) {
             delete o.temp;
         }
         const pal = createPal();
@@ -2710,7 +2549,7 @@ class Editor {
         const blob = new Blob([json], {type:"application/json"});
         let link = document.createElement("a");
         link.href = window.URL.createObjectURL(blob);
-        link.download = "untitled.skin.json";
+        link.download = "untitled.skin-json";
         link.click();
     }
     drawGradEdit(ctx, obj) {
@@ -2762,9 +2601,10 @@ class Editor {
         if(objSel)
             objSel.getSelBox();
 
-        for(let o of objRoot.entries(1, 1, 0)) {
-            if(o.visible)
+        for(let o of objRoot.entries(objRoot, 1, 1, 0)) {
+            if(objRoot.isVisible(o)) {
                 this.drawObj(this.ctx3, o);
+            }
         }
         if(this.newObj) {
             if(this.newObj.type == "Shape")
@@ -2832,7 +2672,7 @@ class Editor {
 
 function init() {
     console.log("init"); 
-    objRoot = new Obj("Group", null, 0, 0, 1024, 768);
+    objRoot = new ObjRoot("Group", null, 0, 0, 1024, 768);
     objSel = new ObjSel();
     objRoot.name = "root";
     objClipboard = null;
@@ -2854,37 +2694,7 @@ function init() {
         }
     })
 }
-/*
-const testGroup = [
-    {type:"Group",
-        list:[{type:"Rect"}]
-    },
-    {type:"Rect"},
-    {type:"Circle"},
-    {type:"Text"},
-    {type:"Group",
-        list:[
-                    {type:"Shape"}
-        ],
-    },
-    {type:"Shape"}
-];
-
-function test() {
-    let og = new Obj();
-    og.set(testGroup);
-
-    console.log(og)
-    for(let o of og.entries(1,0,0)) {
-        console.log(o)
-//        console.log(o.o);
-    }
-    console.log("len", og.len())
-*/
-//    og.adjust();
-//}
 
 window.onload = () => {
-//    test();
     init();
 }

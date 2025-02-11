@@ -1,0 +1,3154 @@
+{
+ "document": {
+  "width": 64,
+  "height": 64,
+  "grid": {
+   "x": 4,
+   "y": 4
+  }
+ },
+ "palette": [
+  "#000000",
+  "#0000ff",
+  "#00ff00",
+  "#00ffff",
+  "#ff0000",
+  "#ff00ff",
+  "#ffff00",
+  "#ffffff",
+  "#808080",
+  "#000080",
+  "#008000",
+  "#008080",
+  "#800000",
+  "#800080",
+  "#808000",
+  "#c0c0c0",
+  "#000000",
+  "#202020",
+  "#404040",
+  "#606060",
+  "#808080",
+  "#a0a0a0",
+  "#c0c0c0",
+  "#e0e0e0",
+  "#adff2f",
+  "#afeeee",
+  "#b0c4de",
+  "#b0e0e6",
+  "#b22222",
+  "#b8860b",
+  "#ba55d3",
+  "#bc8f8f",
+  "#bdb76b",
+  "#c0c0c0",
+  "#c71585",
+  "#cd5c5c",
+  "#cd853f",
+  "#d2691e",
+  "#d2b48c",
+  "#d3d3d3"
+ ],
+ "root": {
+  "type": "Group",
+  "name": "root",
+  "id": "75828ea9-8d92-4bc1-8e7d-eb534ba02265",
+  "x": 0,
+  "y": 0,
+  "w": 1024,
+  "h": 768,
+  "visible": true,
+  "lock": false,
+  "rotate": 0,
+  "list": [
+   {
+    "type": "Group",
+    "name": "ToolImage",
+    "id": "3982d263-8323-4478-8121-bccfe5034a7a",
+    "x": 4,
+    "y": 4,
+    "w": 56,
+    "h": 56,
+    "visible": true,
+    "lock": false,
+    "rotate": 0,
+    "list": [
+     {
+      "type": "Circle",
+      "name": null,
+      "id": "573bdd48-5510-4855-89dc-637aa36ef77f",
+      "x": 12,
+      "y": 12,
+      "w": 16,
+      "h": 16,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "colFill1": "#ff0000",
+      "colFill1Alpha": 100,
+      "colFill2": "#800000",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "linear",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Shape",
+      "name": null,
+      "id": "da2f2d96-096a-421f-ba7b-2a438d2ba6d2",
+      "x": 4,
+      "y": 24,
+      "w": 56,
+      "h": 36,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "shape": [
+       {
+        "x": 4,
+        "y": 60
+       },
+       {
+        "x": 4,
+        "y": 60
+       },
+       {
+        "x": 4,
+        "y": 60
+       },
+       {
+        "x": 4,
+        "y": 48
+       },
+       {
+        "x": 4,
+        "y": 48
+       },
+       {
+        "x": 4,
+        "y": 48
+       },
+       {
+        "x": 16,
+        "y": 36
+       },
+       {
+        "x": 16,
+        "y": 36
+       },
+       {
+        "x": 16,
+        "y": 36
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 44,
+        "y": 24
+       },
+       {
+        "x": 44,
+        "y": 24
+       },
+       {
+        "x": 44,
+        "y": 24
+       },
+       {
+        "x": 60,
+        "y": 40
+       },
+       {
+        "x": 60,
+        "y": 40
+       },
+       {
+        "x": 60,
+        "y": 40
+       },
+       {
+        "x": 60,
+        "y": 60
+       },
+       {
+        "x": 60,
+        "y": 60
+       },
+       {
+        "x": 60,
+        "y": 60
+       }
+      ],
+      "shapeOrgX": 4,
+      "shapeOrgY": 24,
+      "shapeOrgW": 56,
+      "shapeOrgH": 36,
+      "shapeClose": true,
+      "colFill1": "#ff0000",
+      "colFill1Alpha": 100,
+      "colFill2": "#800000",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "linear",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Rect",
+      "name": null,
+      "id": "0c05f94f-faae-40ac-ab41-045221d60953",
+      "x": 4,
+      "y": 4,
+      "w": 56,
+      "h": 56,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "rxSep": false,
+      "rx1": 0,
+      "rx2": 0,
+      "rx3": 0,
+      "rx4": 0,
+      "colFill1": "#8090a0",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "none",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": false,
+      "stroke": true,
+      "lineWidth": 2,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     }
+    ],
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Polygon",
+    "name": "ToolPolygon",
+    "id": "ecbfe2dc-588a-40b9-96d3-e0b2ffa5770f",
+    "x": 4,
+    "y": 4,
+    "w": 56,
+    "h": 60,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "polyVertex": 5,
+    "polyDepth": 100,
+    "polyTopWidth": 0,
+    "polyBottomWidth": 0,
+    "colFill1": "#ff0000",
+    "colFill1Alpha": 100,
+    "colFill2": "#800000",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Shape",
+    "name": "ToolHand",
+    "id": "e7329da2-22b1-407e-9a2a-728cc00f6851",
+    "x": 4,
+    "y": 4,
+    "w": 54,
+    "h": 56,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "shape": [
+     {
+      "x": 16,
+      "y": 60
+     },
+     {
+      "x": 16,
+      "y": 60
+     },
+     {
+      "x": 16,
+      "y": 60
+     },
+     {
+      "x": 6,
+      "y": 48
+     },
+     {
+      "x": 6,
+      "y": 48
+     },
+     {
+      "x": 6,
+      "y": 48
+     },
+     {
+      "x": 2,
+      "y": 24
+     },
+     {
+      "x": 8,
+      "y": 24
+     },
+     {
+      "x": 14,
+      "y": 24
+     },
+     {
+      "x": 16,
+      "y": 36
+     },
+     {
+      "x": 16,
+      "y": 36
+     },
+     {
+      "x": 16,
+      "y": 36
+     },
+     {
+      "x": 16,
+      "y": 42
+     },
+     {
+      "x": 16,
+      "y": 42
+     },
+     {
+      "x": 16,
+      "y": 42
+     },
+     {
+      "x": 16,
+      "y": 12
+     },
+     {
+      "x": 16,
+      "y": 12
+     },
+     {
+      "x": 16,
+      "y": 12
+     },
+     {
+      "x": 16,
+      "y": 8
+     },
+     {
+      "x": 21,
+      "y": 8
+     },
+     {
+      "x": 26,
+      "y": 8
+     },
+     {
+      "x": 26,
+      "y": 12
+     },
+     {
+      "x": 26,
+      "y": 12
+     },
+     {
+      "x": 26,
+      "y": 12
+     },
+     {
+      "x": 26,
+      "y": 32
+     },
+     {
+      "x": 26,
+      "y": 32
+     },
+     {
+      "x": 26,
+      "y": 32
+     },
+     {
+      "x": 26,
+      "y": 8
+     },
+     {
+      "x": 26,
+      "y": 8
+     },
+     {
+      "x": 26,
+      "y": 8
+     },
+     {
+      "x": 26,
+      "y": 4
+     },
+     {
+      "x": 31,
+      "y": 4
+     },
+     {
+      "x": 36,
+      "y": 4
+     },
+     {
+      "x": 36,
+      "y": 8
+     },
+     {
+      "x": 36,
+      "y": 8
+     },
+     {
+      "x": 36,
+      "y": 8
+     },
+     {
+      "x": 36,
+      "y": 34
+     },
+     {
+      "x": 36,
+      "y": 34
+     },
+     {
+      "x": 36,
+      "y": 34
+     },
+     {
+      "x": 36,
+      "y": 12
+     },
+     {
+      "x": 36,
+      "y": 12
+     },
+     {
+      "x": 36,
+      "y": 12
+     },
+     {
+      "x": 36,
+      "y": 8
+     },
+     {
+      "x": 41,
+      "y": 8
+     },
+     {
+      "x": 46,
+      "y": 8
+     },
+     {
+      "x": 46,
+      "y": 12
+     },
+     {
+      "x": 46,
+      "y": 12
+     },
+     {
+      "x": 46,
+      "y": 12
+     },
+     {
+      "x": 46,
+      "y": 36
+     },
+     {
+      "x": 46,
+      "y": 36
+     },
+     {
+      "x": 46,
+      "y": 36
+     },
+     {
+      "x": 46,
+      "y": 16
+     },
+     {
+      "x": 46,
+      "y": 16
+     },
+     {
+      "x": 46,
+      "y": 16
+     },
+     {
+      "x": 46,
+      "y": 12
+     },
+     {
+      "x": 51,
+      "y": 12
+     },
+     {
+      "x": 56,
+      "y": 12
+     },
+     {
+      "x": 56,
+      "y": 16
+     },
+     {
+      "x": 56,
+      "y": 16
+     },
+     {
+      "x": 56,
+      "y": 16
+     },
+     {
+      "x": 56,
+      "y": 36
+     },
+     {
+      "x": 56,
+      "y": 36
+     },
+     {
+      "x": 56,
+      "y": 36
+     },
+     {
+      "x": 56,
+      "y": 48
+     },
+     {
+      "x": 56,
+      "y": 48
+     },
+     {
+      "x": 56,
+      "y": 48
+     },
+     {
+      "x": 48,
+      "y": 60
+     },
+     {
+      "x": 48,
+      "y": 60
+     },
+     {
+      "x": 48,
+      "y": 60
+     }
+    ],
+    "shapeOrgX": 2,
+    "shapeOrgY": 4,
+    "shapeOrgW": 54,
+    "shapeOrgH": 56,
+    "shapeClose": true,
+    "colFill1": "#ff0000",
+    "colFill1Alpha": 100,
+    "colFill2": "#800000",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Shape",
+    "name": "ToolShape",
+    "id": "e63be7bc-7f9d-4d9c-951b-601b46005f55",
+    "x": 0,
+    "y": 8,
+    "w": 64,
+    "h": 52,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "shape": [
+     {
+      "x": 32,
+      "y": 64
+     },
+     {
+      "x": 32,
+      "y": 64
+     },
+     {
+      "x": 32,
+      "y": 64
+     },
+     {
+      "x": 16,
+      "y": 56
+     },
+     {
+      "x": 8,
+      "y": 40
+     },
+     {
+      "x": 0,
+      "y": 24
+     },
+     {
+      "x": 0,
+      "y": 8
+     },
+     {
+      "x": 16,
+      "y": 8
+     },
+     {
+      "x": 32,
+      "y": 8
+     },
+     {
+      "x": 32,
+      "y": 24
+     },
+     {
+      "x": 32,
+      "y": 24
+     },
+     {
+      "x": 32,
+      "y": 24
+     },
+     {
+      "x": 32,
+      "y": 8
+     },
+     {
+      "x": 48,
+      "y": 8
+     },
+     {
+      "x": 64,
+      "y": 8
+     },
+     {
+      "x": 64,
+      "y": 24
+     },
+     {
+      "x": 56,
+      "y": 40
+     },
+     {
+      "x": 48,
+      "y": 56
+     }
+    ],
+    "shapeOrgX": 0,
+    "shapeOrgY": 8,
+    "shapeOrgW": 64,
+    "shapeOrgH": 52,
+    "shapeClose": true,
+    "colFill1": "#ff0000",
+    "colFill1Alpha": 100,
+    "colFill2": "#800000",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Shape",
+    "name": "ToolText",
+    "id": "079c8472-8292-4cac-966e-444357da1c04",
+    "x": 8,
+    "y": 8,
+    "w": 48,
+    "h": 48,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "shape": [
+     {
+      "x": 6,
+      "y": 8
+     },
+     {
+      "x": 6,
+      "y": 8
+     },
+     {
+      "x": 6,
+      "y": 8
+     },
+     {
+      "x": 58,
+      "y": 8
+     },
+     {
+      "x": 58,
+      "y": 8
+     },
+     {
+      "x": 58,
+      "y": 8
+     },
+     {
+      "x": 58,
+      "y": 18
+     },
+     {
+      "x": 58,
+      "y": 18
+     },
+     {
+      "x": 58,
+      "y": 18
+     },
+     {
+      "x": 38,
+      "y": 18
+     },
+     {
+      "x": 38,
+      "y": 18
+     },
+     {
+      "x": 38,
+      "y": 18
+     },
+     {
+      "x": 38,
+      "y": 56
+     },
+     {
+      "x": 38,
+      "y": 56
+     },
+     {
+      "x": 38,
+      "y": 56
+     },
+     {
+      "x": 26,
+      "y": 56
+     },
+     {
+      "x": 26,
+      "y": 56
+     },
+     {
+      "x": 26,
+      "y": 56
+     },
+     {
+      "x": 26,
+      "y": 18
+     },
+     {
+      "x": 26,
+      "y": 18
+     },
+     {
+      "x": 26,
+      "y": 18
+     },
+     {
+      "x": 6,
+      "y": 18
+     },
+     {
+      "x": 6,
+      "y": 18
+     },
+     {
+      "x": 6,
+      "y": 18
+     }
+    ],
+    "shapeOrgX": 8,
+    "shapeOrgY": 8,
+    "shapeOrgW": 48,
+    "shapeOrgH": 48,
+    "shapeClose": true,
+    "colFill1": "#ff0000",
+    "colFill1Alpha": 100,
+    "colFill2": "#800000",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Circle",
+    "name": "ToolCircle",
+    "id": "f5dada99-2352-4d03-a4af-4becc4a0562c",
+    "x": 8,
+    "y": 8,
+    "w": 48,
+    "h": 48,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "colFill1": "#ff0000",
+    "colFill1Alpha": 100,
+    "colFill2": "#800000",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Rect",
+    "name": "ToolRect",
+    "id": "e1900d84-e6f0-4c0a-b1b4-9973382f10a8",
+    "x": 8,
+    "y": 8,
+    "w": 48,
+    "h": 48,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "rxSep": false,
+    "rx1": 0,
+    "rx2": 0,
+    "rx3": 0,
+    "rx4": 0,
+    "colFill1": "#ff0000",
+    "colFill1Alpha": 100,
+    "colFill2": "#800000",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Shape",
+    "name": "ToolSelect",
+    "id": "a908ea5c-deb6-4948-8e57-818de171ab3c",
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "shape": [
+     {
+      "x": 0,
+      "y": 0
+     },
+     {
+      "x": 0,
+      "y": 0
+     },
+     {
+      "x": 0,
+      "y": 0
+     },
+     {
+      "x": 48,
+      "y": 24
+     },
+     {
+      "x": 48,
+      "y": 24
+     },
+     {
+      "x": 48,
+      "y": 24
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 64,
+      "y": 56
+     },
+     {
+      "x": 64,
+      "y": 56
+     },
+     {
+      "x": 64,
+      "y": 56
+     },
+     {
+      "x": 56,
+      "y": 64
+     },
+     {
+      "x": 56,
+      "y": 64
+     },
+     {
+      "x": 56,
+      "y": 64
+     },
+     {
+      "x": 32,
+      "y": 40
+     },
+     {
+      "x": 32,
+      "y": 40
+     },
+     {
+      "x": 32,
+      "y": 40
+     },
+     {
+      "x": 24,
+      "y": 48
+     },
+     {
+      "x": 24,
+      "y": 48
+     },
+     {
+      "x": 24,
+      "y": 48
+     }
+    ],
+    "shapeOrgX": 0,
+    "shapeOrgY": 0,
+    "shapeOrgW": 64,
+    "shapeOrgH": 64,
+    "shapeClose": true,
+    "colFill1": "#ff0000",
+    "colFill1Alpha": 100,
+    "colFill2": "#800000",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Group",
+    "name": "Grid",
+    "id": "3545b52e-9784-4553-9f70-70aa1bbe39cf",
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [
+     {
+      "type": "Group",
+      "name": "eye",
+      "id": "84a3404c-eef6-479e-9339-442d0bc79ceb",
+      "x": 4,
+      "y": 16,
+      "w": 56,
+      "h": 28,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [
+       {
+        "type": "Circle",
+        "name": null,
+        "id": "8323e8ac-bc1a-4600-b55a-e84a4dd70852",
+        "x": 20,
+        "y": 20,
+        "w": 24,
+        "h": 20,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": true,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Circle",
+        "name": null,
+        "id": "b680f6f3-4aea-4b8f-b90a-906151ace3c0",
+        "x": 4,
+        "y": 16,
+        "w": 56,
+        "h": 28,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "colFill1": "#ffffff",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": true,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       }
+      ],
+      "colFill1": "#8090a0",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "none",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Group",
+      "name": "Grid",
+      "id": "d5c3c8a8-7f43-4f06-b550-36aa9fe177b2",
+      "x": 0,
+      "y": 0,
+      "w": 64,
+      "h": 64,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "4c5a0181-37d6-42bc-bd8e-aa0de5f9a681",
+        "x": 56,
+        "y": 56,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "ef77a286-93f9-4e00-ab0a-41eaeefe4c3a",
+        "x": 28,
+        "y": 56,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "a69e5f5c-51a6-4b59-bffd-197710e7b82e",
+        "x": 0,
+        "y": 56,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "a0748114-7160-47c1-a779-608722d76271",
+        "x": 56,
+        "y": 28,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "a6d4de61-ac40-4588-8aad-4bbbe964d762",
+        "x": 0,
+        "y": 28,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "d43bb648-a703-46eb-aa2e-77947c1c306a",
+        "x": 28,
+        "y": 28,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "180e8987-3e9b-4837-82f1-20ca30806fb5",
+        "x": 0,
+        "y": 0,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "270c52a2-698e-44e3-89a8-663ae5f4e510",
+        "x": 56,
+        "y": 0,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "495d1494-5034-485a-93a7-ea051af1acb0",
+        "x": 28,
+        "y": 0,
+        "w": 8,
+        "h": 8,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       },
+       {
+        "type": "Rect",
+        "name": null,
+        "id": "ef62d46f-b300-40dd-99ae-cd3bba3a4e45",
+        "x": 0,
+        "y": 0,
+        "w": 4,
+        "h": 4,
+        "visible": true,
+        "lock": false,
+        "rotate": 0,
+        "list": [],
+        "rxSep": false,
+        "rx1": 0,
+        "rx2": 0,
+        "rx3": 0,
+        "rx4": 0,
+        "colFill1": "#000000",
+        "colFill1Alpha": 100,
+        "colFill2": "#202020",
+        "colFill2Alpha": 100,
+        "colStroke": "#000000",
+        "colStrokeAlpha": 100,
+        "colShadow": "#000000",
+        "colGradation": "none",
+        "colGradX1": 0.1,
+        "colGradY1": 0.1,
+        "colGradX2": 0.9,
+        "colGradY2": 0.9,
+        "fill": true,
+        "stroke": false,
+        "lineWidth": 1,
+        "lineJoin": "round",
+        "lineCap": "round",
+        "blur": 0,
+        "embossWidth": 4,
+        "embossDepth": 0,
+        "embossBlur": 50,
+        "textureType": "None",
+        "textureDepth": 0,
+        "textureZoom": 100,
+        "shadowOffX": 8,
+        "shadowOffY": 8,
+        "shadowDepth": 0,
+        "shadowBlur": 8
+       }
+      ],
+      "colFill1": "#8090a0",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "none",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     }
+    ],
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Group",
+    "name": "Zoom",
+    "id": "e08e4228-81b0-4191-af32-9455ea3fe6f3",
+    "x": 4,
+    "y": 4,
+    "w": 60,
+    "h": 60,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [
+     {
+      "type": "Shape",
+      "name": "1",
+      "id": "82bb79ab-8528-4ab2-bab9-c09c58e98c2e",
+      "x": 24,
+      "y": 8,
+      "w": 12,
+      "h": 40,
+      "visible": false,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "shape": [
+       {
+        "x": 20,
+        "y": 48
+       },
+       {
+        "x": 20,
+        "y": 48
+       },
+       {
+        "x": 20,
+        "y": 48
+       },
+       {
+        "x": 20,
+        "y": 44
+       },
+       {
+        "x": 20,
+        "y": 44
+       },
+       {
+        "x": 20,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 16
+       },
+       {
+        "x": 24,
+        "y": 16
+       },
+       {
+        "x": 24,
+        "y": 16
+       },
+       {
+        "x": 20,
+        "y": 16
+       },
+       {
+        "x": 20,
+        "y": 16
+       },
+       {
+        "x": 20,
+        "y": 16
+       },
+       {
+        "x": 28,
+        "y": 8
+       },
+       {
+        "x": 28,
+        "y": 8
+       },
+       {
+        "x": 28,
+        "y": 8
+       },
+       {
+        "x": 32,
+        "y": 8
+       },
+       {
+        "x": 32,
+        "y": 8
+       },
+       {
+        "x": 32,
+        "y": 8
+       },
+       {
+        "x": 32,
+        "y": 44
+       },
+       {
+        "x": 32,
+        "y": 44
+       },
+       {
+        "x": 32,
+        "y": 44
+       },
+       {
+        "x": 36,
+        "y": 44
+       },
+       {
+        "x": 36,
+        "y": 44
+       },
+       {
+        "x": 36,
+        "y": 44
+       },
+       {
+        "x": 36,
+        "y": 48
+       },
+       {
+        "x": 36,
+        "y": 48
+       },
+       {
+        "x": 36,
+        "y": 48
+       }
+      ],
+      "shapeOrgX": 24,
+      "shapeOrgY": 8,
+      "shapeOrgW": 12,
+      "shapeOrgH": 40,
+      "shapeClose": true,
+      "colFill1": "#ffff00",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "none",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Rect",
+      "name": "minus",
+      "id": "676e68ad-b083-488e-8d87-3dff42844ec5",
+      "x": 12,
+      "y": 24,
+      "w": 32,
+      "h": 8,
+      "visible": false,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "rxSep": false,
+      "rx1": 0,
+      "rx2": 0,
+      "rx3": 0,
+      "rx4": 0,
+      "colFill1": "#ffff00",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "none",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Shape",
+      "name": "plus",
+      "id": "a4922727-1c6b-42bd-bb9b-0f3712dd1f45",
+      "x": 8,
+      "y": 8,
+      "w": 40,
+      "h": 40,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "shape": [
+       {
+        "x": 12,
+        "y": 32
+       },
+       {
+        "x": 12,
+        "y": 32
+       },
+       {
+        "x": 12,
+        "y": 32
+       },
+       {
+        "x": 12,
+        "y": 24
+       },
+       {
+        "x": 12,
+        "y": 24
+       },
+       {
+        "x": 12,
+        "y": 24
+       },
+       {
+        "x": 24,
+        "y": 24
+       },
+       {
+        "x": 24,
+        "y": 24
+       },
+       {
+        "x": 24,
+        "y": 24
+       },
+       {
+        "x": 24,
+        "y": 12
+       },
+       {
+        "x": 24,
+        "y": 12
+       },
+       {
+        "x": 24,
+        "y": 12
+       },
+       {
+        "x": 32,
+        "y": 12
+       },
+       {
+        "x": 32,
+        "y": 12
+       },
+       {
+        "x": 32,
+        "y": 12
+       },
+       {
+        "x": 32,
+        "y": 24
+       },
+       {
+        "x": 32,
+        "y": 24
+       },
+       {
+        "x": 32,
+        "y": 24
+       },
+       {
+        "x": 44,
+        "y": 24
+       },
+       {
+        "x": 44,
+        "y": 24
+       },
+       {
+        "x": 44,
+        "y": 24
+       },
+       {
+        "x": 44,
+        "y": 32
+       },
+       {
+        "x": 44,
+        "y": 32
+       },
+       {
+        "x": 44,
+        "y": 32
+       },
+       {
+        "x": 32,
+        "y": 32
+       },
+       {
+        "x": 32,
+        "y": 32
+       },
+       {
+        "x": 32,
+        "y": 32
+       },
+       {
+        "x": 32,
+        "y": 44
+       },
+       {
+        "x": 32,
+        "y": 44
+       },
+       {
+        "x": 32,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 44
+       },
+       {
+        "x": 24,
+        "y": 32
+       },
+       {
+        "x": 24,
+        "y": 32
+       },
+       {
+        "x": 24,
+        "y": 32
+       }
+      ],
+      "shapeOrgX": 8,
+      "shapeOrgY": 8,
+      "shapeOrgW": 40,
+      "shapeOrgH": 40,
+      "shapeClose": true,
+      "colFill1": "#ffff00",
+      "colFill1Alpha": 100,
+      "colFill2": "#ffff00",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "none",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Circle",
+      "name": null,
+      "id": "27b64862-8739-4f5c-bb8f-869350e674ab",
+      "x": 4,
+      "y": 4,
+      "w": 48,
+      "h": 48,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "colFill1": "#00ffff",
+      "colFill1Alpha": 100,
+      "colFill2": "#008080",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "radial",
+      "colGradX1": 0.3333333333333333,
+      "colGradY1": 0.3333333333333333,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Shape",
+      "name": null,
+      "id": "92ad61ac-456f-49f2-b4e6-cf7b9b65ed55",
+      "x": 36,
+      "y": 36,
+      "w": 28,
+      "h": 28,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "shape": [
+       {
+        "x": 64,
+        "y": 56
+       },
+       {
+        "x": 64,
+        "y": 56
+       },
+       {
+        "x": 64,
+        "y": 56
+       },
+       {
+        "x": 56,
+        "y": 64
+       },
+       {
+        "x": 56,
+        "y": 64
+       },
+       {
+        "x": 56,
+        "y": 64
+       },
+       {
+        "x": 36,
+        "y": 44
+       },
+       {
+        "x": 36,
+        "y": 44
+       },
+       {
+        "x": 36,
+        "y": 44
+       },
+       {
+        "x": 44,
+        "y": 36
+       },
+       {
+        "x": 44,
+        "y": 36
+       },
+       {
+        "x": 44,
+        "y": 36
+       }
+      ],
+      "shapeOrgX": 36,
+      "shapeOrgY": 36,
+      "shapeOrgW": 28,
+      "shapeOrgH": 28,
+      "shapeClose": true,
+      "colFill1": "#808080",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "symmetric",
+      "colGradX1": 0.42857142857142855,
+      "colGradY1": 0.42857142857142855,
+      "colGradX2": 0.2857142857142857,
+      "colGradY2": 0.5714285714285714,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     }
+    ],
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Group",
+    "name": "Del",
+    "id": "306eb216-5f16-4136-87aa-66558d233fbe",
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 60,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [
+     {
+      "type": "Shape",
+      "name": null,
+      "id": "7d01e9ef-0db2-459e-9c67-e15a440000d6",
+      "x": 0,
+      "y": 0,
+      "w": 64,
+      "h": 60,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "shape": [
+       {
+        "x": 0,
+        "y": 48
+       },
+       {
+        "x": 0,
+        "y": 48
+       },
+       {
+        "x": 0,
+        "y": 48
+       },
+       {
+        "x": 24,
+        "y": 32
+       },
+       {
+        "x": 24,
+        "y": 32
+       },
+       {
+        "x": 24,
+        "y": 32
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": 0,
+        "y": 16
+       },
+       {
+        "x": 8,
+        "y": 8
+       },
+       {
+        "x": 8,
+        "y": 8
+       },
+       {
+        "x": 8,
+        "y": 8
+       },
+       {
+        "x": 32,
+        "y": 24
+       },
+       {
+        "x": 32,
+        "y": 24
+       },
+       {
+        "x": 32,
+        "y": 24
+       },
+       {
+        "x": 56,
+        "y": 8
+       },
+       {
+        "x": 56,
+        "y": 8
+       },
+       {
+        "x": 56,
+        "y": 8
+       },
+       {
+        "x": 64,
+        "y": 16
+       },
+       {
+        "x": 64,
+        "y": 16
+       },
+       {
+        "x": 64,
+        "y": 16
+       },
+       {
+        "x": 40,
+        "y": 32
+       },
+       {
+        "x": 40,
+        "y": 32
+       },
+       {
+        "x": 40,
+        "y": 32
+       },
+       {
+        "x": 64,
+        "y": 48
+       },
+       {
+        "x": 64,
+        "y": 48
+       },
+       {
+        "x": 64,
+        "y": 48
+       },
+       {
+        "x": 56,
+        "y": 56
+       },
+       {
+        "x": 56,
+        "y": 56
+       },
+       {
+        "x": 56,
+        "y": 56
+       },
+       {
+        "x": 32,
+        "y": 40
+       },
+       {
+        "x": 32,
+        "y": 40
+       },
+       {
+        "x": 32,
+        "y": 40
+       },
+       {
+        "x": 8,
+        "y": 56
+       },
+       {
+        "x": 8,
+        "y": 56
+       },
+       {
+        "x": 8,
+        "y": 56
+       }
+      ],
+      "shapeOrgX": 0,
+      "shapeOrgY": 0,
+      "shapeOrgW": 64,
+      "shapeOrgH": 60,
+      "shapeClose": true,
+      "colFill1": "#ff0000",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "none",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Rect",
+      "name": null,
+      "id": "1edab3e4-92bf-4b57-a111-bf4a4af5a57f",
+      "x": 0,
+      "y": 8,
+      "w": 64,
+      "h": 48,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "rxSep": false,
+      "rx1": 0,
+      "rx2": 0,
+      "rx3": 0,
+      "rx4": 0,
+      "colFill1": "#008000",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "linear",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     }
+    ],
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Group",
+    "name": "Dup",
+    "id": "9f88cbc7-368e-4f91-90ae-4433d1d129f5",
+    "x": 0,
+    "y": 4,
+    "w": 64,
+    "h": 56,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [
+     {
+      "type": "Rect",
+      "name": null,
+      "id": "4124e266-41ce-4b73-b092-03a4ad0a8566",
+      "parent": "8904323c-0c71-4d6e-8b0b-7f495ed09cbc",
+      "x": 0,
+      "y": 4,
+      "w": 44,
+      "h": 36,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "rxSep": false,
+      "rx1": 0,
+      "rx2": 0,
+      "rx3": 0,
+      "rx4": 0,
+      "colFill1": "#008000",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "linear",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     },
+     {
+      "type": "Rect",
+      "name": null,
+      "id": "5521c724-dfaa-41fe-b4cf-53e5065ba20e",
+      "parent": "8904323c-0c71-4d6e-8b0b-7f495ed09cbc",
+      "x": 20,
+      "y": 24,
+      "w": 44,
+      "h": 36,
+      "visible": true,
+      "lock": false,
+      "rotate": 0,
+      "list": [],
+      "rxSep": false,
+      "rx1": 0,
+      "rx2": 0,
+      "rx3": 0,
+      "rx4": 0,
+      "colFill1": "#008000",
+      "colFill1Alpha": 100,
+      "colFill2": "#202020",
+      "colFill2Alpha": 100,
+      "colStroke": "#000000",
+      "colStrokeAlpha": 100,
+      "colShadow": "#000000",
+      "colGradation": "linear",
+      "colGradX1": 0.1,
+      "colGradY1": 0.1,
+      "colGradX2": 0.9,
+      "colGradY2": 0.9,
+      "fill": true,
+      "stroke": true,
+      "lineWidth": 1,
+      "lineJoin": "round",
+      "lineCap": "round",
+      "blur": 0,
+      "embossWidth": 4,
+      "embossDepth": 0,
+      "embossBlur": 50,
+      "textureType": "None",
+      "textureDepth": 0,
+      "textureZoom": 100,
+      "shadowOffX": 8,
+      "shadowOffY": 8,
+      "shadowDepth": 0,
+      "shadowBlur": 8
+     }
+    ],
+    "colFill1": "#8090a0",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "none",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Shape",
+    "name": "Down",
+    "id": "166769dc-ce4f-4912-9592-0d7bdedc86bf",
+    "parent": "46fa39b8-89c0-4640-a7b9-8cae10e9c011",
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "shape": [
+     {
+      "x": 24,
+      "y": 0
+     },
+     {
+      "x": 24,
+      "y": 0
+     },
+     {
+      "x": 24,
+      "y": 0
+     },
+     {
+      "x": 40,
+      "y": 0
+     },
+     {
+      "x": 40,
+      "y": 0
+     },
+     {
+      "x": 40,
+      "y": 0
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 56,
+      "y": 32
+     },
+     {
+      "x": 56,
+      "y": 32
+     },
+     {
+      "x": 56,
+      "y": 32
+     },
+     {
+      "x": 32,
+      "y": 64
+     },
+     {
+      "x": 32,
+      "y": 64
+     },
+     {
+      "x": 32,
+      "y": 64
+     },
+     {
+      "x": 8,
+      "y": 32
+     },
+     {
+      "x": 8,
+      "y": 32
+     },
+     {
+      "x": 8,
+      "y": 32
+     },
+     {
+      "x": 24,
+      "y": 32
+     },
+     {
+      "x": 24,
+      "y": 32
+     },
+     {
+      "x": 24,
+      "y": 32
+     },
+     {
+      "x": 24,
+      "y": 0
+     },
+     {
+      "x": 24,
+      "y": 0
+     },
+     {
+      "x": 24,
+      "y": 0
+     }
+    ],
+    "shapeOrgX": 0,
+    "shapeOrgY": 0,
+    "shapeOrgW": 64,
+    "shapeOrgH": 64,
+    "shapeClose": true,
+    "colFill1": "#008000",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   },
+   {
+    "type": "Shape",
+    "name": "Up",
+    "id": "1f745eef-2ddb-496a-85ad-03f7429a5afb",
+    "parent": "46fa39b8-89c0-4640-a7b9-8cae10e9c011",
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64,
+    "visible": false,
+    "lock": false,
+    "rotate": 0,
+    "list": [],
+    "shape": [
+     {
+      "x": 32,
+      "y": 0
+     },
+     {
+      "x": 32,
+      "y": 0
+     },
+     {
+      "x": 32,
+      "y": 0
+     },
+     {
+      "x": 56,
+      "y": 32
+     },
+     {
+      "x": 56,
+      "y": 32
+     },
+     {
+      "x": 56,
+      "y": 32
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 40,
+      "y": 32
+     },
+     {
+      "x": 40,
+      "y": 64
+     },
+     {
+      "x": 40,
+      "y": 64
+     },
+     {
+      "x": 40,
+      "y": 64
+     },
+     {
+      "x": 24,
+      "y": 64
+     },
+     {
+      "x": 24,
+      "y": 64
+     },
+     {
+      "x": 24,
+      "y": 64
+     },
+     {
+      "x": 24,
+      "y": 32
+     },
+     {
+      "x": 24,
+      "y": 32
+     },
+     {
+      "x": 24,
+      "y": 32
+     },
+     {
+      "x": 8,
+      "y": 32
+     },
+     {
+      "x": 8,
+      "y": 32
+     },
+     {
+      "x": 8,
+      "y": 32
+     }
+    ],
+    "shapeOrgX": 0,
+    "shapeOrgY": 0,
+    "shapeOrgW": 64,
+    "shapeOrgH": 64,
+    "shapeClose": true,
+    "colFill1": "#008000",
+    "colFill1Alpha": 100,
+    "colFill2": "#202020",
+    "colFill2Alpha": 100,
+    "colStroke": "#000000",
+    "colStrokeAlpha": 100,
+    "colShadow": "#000000",
+    "colGradation": "linear",
+    "colGradX1": 0.1,
+    "colGradY1": 0.1,
+    "colGradX2": 0.9,
+    "colGradY2": 0.9,
+    "fill": true,
+    "stroke": true,
+    "lineWidth": 1,
+    "lineJoin": "round",
+    "lineCap": "round",
+    "blur": 0,
+    "embossWidth": 4,
+    "embossDepth": 0,
+    "embossBlur": 50,
+    "textureType": "None",
+    "textureDepth": 0,
+    "textureZoom": 100,
+    "shadowOffX": 8,
+    "shadowOffY": 8,
+    "shadowDepth": 0,
+    "shadowBlur": 8
+   }
+  ],
+  "colFill1": "#8090a0",
+  "colFill1Alpha": 100,
+  "colFill2": "#202020",
+  "colFill2Alpha": 100,
+  "colStroke": "#000000",
+  "colStrokeAlpha": 100,
+  "colShadow": "#000000",
+  "colGradation": "none",
+  "colGradX1": 0.1,
+  "colGradY1": 0.1,
+  "colGradX2": 0.9,
+  "colGradY2": 0.9,
+  "fill": true,
+  "stroke": true,
+  "lineWidth": 1,
+  "lineJoin": "round",
+  "lineCap": "round",
+  "blur": 0,
+  "embossWidth": 4,
+  "embossDepth": 0,
+  "embossBlur": 50,
+  "textureType": "None",
+  "textureDepth": 0,
+  "textureZoom": 100,
+  "shadowOffX": 8,
+  "shadowOffY": 8,
+  "shadowDepth": 0,
+  "shadowBlur": 8
+ }
+}
